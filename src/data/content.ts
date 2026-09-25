@@ -63,13 +63,48 @@ export const CAROUSEL_BONUSES: CarouselBonusItem[] = [
 ];
 
 export const EXCLUSIVE_BONUSES = [
-  { icon: "🧘", title: "Kit do Cantinho da Calma" },
-  { icon: "💌", title: "Comunicação Escola-Família" },
-  { icon: "🌱", title: "Trilha por Faixa Etária" },
-  { icon: "🎓", title: "Certificado de Concluído" },
-  { icon: "🗓️", title: "Plano Socioemocional de 30 Dias" },
-  { icon: "🎲", title: "Banco de Dinâmicas e Brincadeiras" },
-  { icon: "📋", title: "Fichas de Observação Socioemocional" },
+  {
+    id: 1,
+    title: "Kit do Cantinho da Calma",
+    imageSrc: "/images/ChatGPT Image Sep 25, 2026, 08_06_15 PM (1).png",
+    alt: "Kit do Cantinho da Calma",
+  },
+  {
+    id: 2,
+    title: "Comunicação Escola-Família",
+    imageSrc: "/images/ChatGPT Image Sep 25, 2026, 08_06_16 PM (2).png",
+    alt: "Comunicação Escola-Família",
+  },
+  {
+    id: 3,
+    title: "Trilha por Faixa Etária",
+    imageSrc: "/images/ChatGPT Image Sep 25, 2026, 08_06_16 PM (3).png",
+    alt: "Trilha por Faixa Etária",
+  },
+  {
+    id: 4,
+    title: "Certificado de Concluído",
+    imageSrc: "/images/ChatGPT Image Sep 25, 2026, 08_06_16 PM (4).png",
+    alt: "Certificado de Concluído",
+  },
+  {
+    id: 5,
+    title: "Plano Socioemocional de 30 Dias",
+    imageSrc: "/images/ChatGPT Image Sep 25, 2026, 08_06_16 PM (5).png",
+    alt: "Plano Socioemocional de 30 Dias",
+  },
+  {
+    id: 6,
+    title: "Banco de Dinâmicas e Brincadeiras",
+    imageSrc: "/images/ChatGPT Image Sep 25, 2026, 08_06_16 PM (6).png",
+    alt: "Banco de Dinâmicas e Brincadeiras",
+  },
+  {
+    id: 7,
+    title: "Fichas de Observação Socioemocional",
+    imageSrc: "/images/ChatGPT Image Sep 25, 2026, 08_06_16 PM (7).png",
+    alt: "Fichas de Observação Socioemocional",
+  },
 ];
 
 export interface PricingPlanItem {
