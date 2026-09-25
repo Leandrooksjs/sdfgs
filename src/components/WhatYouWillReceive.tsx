@@ -188,8 +188,6 @@ export const WhatYouWillReceive: React.FC = () => {
                     loading="lazy"
                   />
                 </div>
-
-                </div>
               </div>
             ))}
           </div>
