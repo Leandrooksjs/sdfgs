@@ -10,7 +10,7 @@ export const HeroSection: React.FC = () => {
     >
       <div className="mx-auto max-w-4xl text-center">
         <h1 className="text-2xl leading-tight font-black tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
-          <span className="text-rose-500">+320</span> Mapas Mentais Socioemocionais Infantil
+          <span className="text-rose-500">+120</span> Mapas Mentais Socioemocionais Infantil
         </h1>
 
         <a
@@ -21,7 +21,7 @@ export const HeroSection: React.FC = () => {
           <div className="relative mx-auto flex items-center justify-center">
             <img
               src={heroMockup}
-              alt="Mockup +320 Mapas Mentais Socioemocionais Infantil"
+              alt="Mockup +120 Mapas Mentais Socioemocionais Infantil"
               referrerPolicy="no-referrer"
               className="mx-auto w-full object-contain mix-blend-multiply transition-transform duration-300 group-hover:scale-[1.02]"
               loading="eager"
