@@ -1,0 +1,6 @@
+{
+  "name": "+100 Mapas Mentais Socioemocionais",
+  "description": "A forma de Educar Emocionalmente Sem Cartilha, sem trabalhar com apostilas e Com Diálogo de Verdade. +100 Mapas Mentais prontos para transformar sua sala de aula.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
