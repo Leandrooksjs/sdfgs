@@ -60,7 +60,7 @@ export const UpgradeModal: React.FC<UpgradeModalProps> = ({
             </div>
 
             <h3 className="text-xl font-black tracking-tight text-slate-900 sm:text-3xl leading-snug">
-              Leve o Pacote Completo por apenas <span className="text-rose-600">R$ 19,90</span>
+              Leve o Pacote Completo com <span className="text-rose-600">R$ 7,10 de desconto</span>
             </h3>
 
             <p className="text-xs font-medium text-slate-600 sm:text-base">
