@@ -111,7 +111,7 @@ export const PRICING_PLANS: PricingPlan[] = [
   {
     id: "plano-completo",
     featured: true,
-    badge: "Mais Escolhido pelas Professoras",
+    badge: "Exclusivo do plano premium",
     title: "Plano Premium Completo",
     mockupImage: "/images/mockup-mapas-mentais.jpg",
     mockupAlt: "Mockup do Plano Premium +100 Mapas Mentais Socioemocionais",
