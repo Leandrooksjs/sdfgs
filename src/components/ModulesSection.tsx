@@ -48,7 +48,7 @@ export const ModulesSection: React.FC = () => {
           </h2>
         </div>
 
-        <div className="mt-6 grid grid-cols-2 gap-2 sm:mt-7 sm:gap-3 lg:grid-cols-4">
+        <div className="mt-6 grid grid-flow-col grid-cols-2 grid-rows-4 gap-2 sm:mt-7 sm:gap-3">
           {MODULES.map((module) => (
             <article
               key={module.title}
