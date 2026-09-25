@@ -12,9 +12,8 @@ export const BonusSection: React.FC = () => {
           <h2 className="text-2xl font-black tracking-tight text-slate-900 sm:text-4xl uppercase">
             BÔNUS EXCLUSIVOS
           </h2>
-          <div className="mt-3 flex items-center justify-center gap-2 text-sm sm:text-base font-black">
-            <span className="text-slate-400 line-through tracking-wide">DE R$ 297</span>
-            <span className="text-emerald-500 tracking-wider">POR: GRÁTIS</span>
+          <div className="mt-3 flex items-center justify-center text-sm sm:text-base font-black">
+            <span className="text-rose-500 tracking-wide">Exclusivo do plano premium</span>
           </div>
         </div>
 
