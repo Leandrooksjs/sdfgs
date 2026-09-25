@@ -46,22 +46,19 @@ export const ModulesSection: React.FC = () => {
           <h2 className="text-2xl font-black tracking-tight text-slate-900 sm:text-4xl">
             MÓDULOS DOS ENTREGÁVEIS
           </h2>
-          <p className="mx-auto mt-3 max-w-2xl text-sm font-semibold leading-relaxed text-slate-600 sm:text-base">
-            Conteúdos organizados por temas para facilitar a aplicação no dia a dia.
-          </p>
         </div>
 
-        <div className="mt-8 grid grid-cols-2 gap-3 sm:mt-10 sm:gap-5 lg:grid-cols-4">
+        <div className="mt-6 grid grid-cols-2 gap-2 sm:mt-7 sm:gap-3 lg:grid-cols-4">
           {MODULES.map((module) => (
             <article
               key={module.title}
-              className="rounded-3xl border border-slate-200 bg-white p-4 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:border-rose-200 hover:shadow-md sm:p-5"
+              className="rounded-2xl border border-slate-200 bg-white px-4 py-3 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-rose-200 hover:shadow-md sm:px-4 sm:py-3.5"
             >
-              <h3 className="text-base font-black leading-tight text-slate-900 sm:text-lg">
+              <h3 className="text-sm font-black leading-tight text-slate-900 sm:text-base">
                 {module.title}
               </h3>
 
-              <p className="mt-2 text-xs font-medium leading-relaxed text-slate-600 sm:text-sm">
+              <p className="mt-1.5 text-[11px] font-medium leading-relaxed text-slate-600 sm:text-xs">
                 {module.description}
               </p>
             </article>
