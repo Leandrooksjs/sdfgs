@@ -13,10 +13,6 @@ export const HeroSection: React.FC = () => {
           <span className="text-rose-500">+320</span> Mapas Mentais Socioemocionais Infantil
         </h1>
 
-        <p className="mx-auto mt-3 max-w-2xl text-lg leading-snug font-extrabold text-slate-900 sm:mt-5 sm:text-2xl sm:leading-relaxed">
-          Para desenvolver o lado emocional das crianças de forma visual.
-        </p>
-
         <a
           id="hero-mockup-link"
           href="#ofertas"
@@ -34,7 +30,7 @@ export const HeroSection: React.FC = () => {
         </a>
 
         <p className="mx-auto mt-6 max-w-2xl text-base leading-snug font-bold text-slate-700 sm:mt-8 sm:text-xl sm:leading-relaxed">
-          A forma de Educar Emocionalmente Sem Cartilha, sem trabalhar com apostilas e Com Diálogo de Verdade
+          A forma visual e prática de desenvolver o lado emocional das crianças com diálogo de verdade.
         </p>
 
         <div className="mx-auto mt-6 max-w-xl sm:mt-10">
