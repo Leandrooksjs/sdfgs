@@ -1,108 +1,46 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useRef, useState } from "react";
 import { CAROUSEL_BONUSES } from "../data/content";
 
 export const WhatYouWillReceive: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [scrollProgress, setScrollProgress] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
-  const isProgrammaticScroll = useRef(false);
-  const scrollTimeout = useRef<NodeJS.Timeout | null>(null);
-  const rafId = useRef<number | null>(null);
   const isDragging = useRef(false);
   const startX = useRef(0);
   const scrollLeftStart = useRef(0);
-  const hasMovedSignificantly = useRef(false);
 
-  const handleScroll = () => {
-    if (isProgrammaticScroll.current || !containerRef.current) return;
-
-    if (rafId.current) cancelAnimationFrame(rafId.current);
-    rafId.current = requestAnimationFrame(() => {
-      const container = containerRef.current;
-      if (!container) return;
-
-      const cards = container.querySelectorAll(".carousel-card");
-      if (!cards.length) return;
-
-      const containerRect = container.getBoundingClientRect();
-      const containerCenter = containerRect.left + containerRect.width / 2;
-
-      let closestIndex = 0;
-      let minDistance = Infinity;
-
-      cards.forEach((card, idx) => {
-        const cardRect = card.getBoundingClientRect();
-        const cardCenter = cardRect.left + cardRect.width / 2;
-        const distance = Math.abs(containerCenter - cardCenter);
-
-        if (distance < minDistance) {
-          minDistance = distance;
-          closestIndex = idx;
-        }
-      });
-
-      setCurrentIndex((prev) => (prev !== closestIndex ? closestIndex : prev));
-    });
-  };
-
-  const scrollToCard = (index: number) => {
+  const updateProgressFromScroll = () => {
     const container = containerRef.current;
     if (!container) return;
 
-    const cards = container.querySelectorAll(".carousel-card");
-    const targetCard = cards[index] as HTMLElement;
-    if (!targetCard) return;
-
-    isProgrammaticScroll.current = true;
-    setCurrentIndex(index);
-
-    const cardRect = targetCard.getBoundingClientRect();
-    const containerRect = container.getBoundingClientRect();
-    const targetScrollLeft =
-      cardRect.left -
-      containerRect.left +
-      container.scrollLeft -
-      (container.clientWidth - targetCard.offsetWidth) / 2;
-
     const maxScroll = container.scrollWidth - container.clientWidth;
-    const clampedScroll = Math.max(0, Math.min(targetScrollLeft, maxScroll));
-
-    container.style.scrollSnapType = "none";
-    container.scrollTo({ left: clampedScroll, behavior: "smooth" });
-
-    if (scrollTimeout.current) clearTimeout(scrollTimeout.current);
-    scrollTimeout.current = setTimeout(() => {
-      if (container) {
-        container.style.scrollSnapType = "x mandatory";
-      }
-      isProgrammaticScroll.current = false;
-    }, 450);
+    const progress = maxScroll > 0 ? (container.scrollLeft / maxScroll) * 100 : 0;
+    setScrollProgress(progress);
   };
 
-  useEffect(() => {
-    return () => {
-      if (scrollTimeout.current) clearTimeout(scrollTimeout.current);
-      if (rafId.current) cancelAnimationFrame(rafId.current);
-    };
-  }, []);
+  const handleSlider = (value: number) => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    const maxScroll = container.scrollWidth - container.clientWidth;
+    container.scrollLeft = (value / 100) * maxScroll;
+    setScrollProgress(value);
+  };
 
   const handleMouseDown = (e: React.MouseEvent) => {
-    if (!containerRef.current) return;
+    const container = containerRef.current;
+    if (!container) return;
+
     isDragging.current = true;
-    hasMovedSignificantly.current = false;
-    startX.current = e.pageX - containerRef.current.offsetLeft;
-    scrollLeftStart.current = containerRef.current.scrollLeft;
+    startX.current = e.pageX;
+    scrollLeftStart.current = container.scrollLeft;
   };
 
   const handleMouseMove = (e: React.MouseEvent) => {
-    if (!isDragging.current || !containerRef.current) return;
-    const distance =
-      (e.pageX - containerRef.current.offsetLeft - startX.current) * 1.2;
+    const container = containerRef.current;
+    if (!isDragging.current || !container) return;
 
-    if (Math.abs(distance) > 5) {
-      hasMovedSignificantly.current = true;
-    }
-
-    containerRef.current.scrollLeft = scrollLeftStart.current - distance;
+    const distance = e.pageX - startX.current;
+    container.scrollLeft = scrollLeftStart.current - distance;
   };
 
   const handleMouseUp = () => {
@@ -124,26 +62,17 @@ export const WhatYouWillReceive: React.FC = () => {
         <div className="relative">
           <div
             ref={containerRef}
-            onScroll={handleScroll}
+            onScroll={updateProgressFromScroll}
             onMouseDown={handleMouseDown}
             onMouseMove={handleMouseMove}
             onMouseUp={handleMouseUp}
             onMouseLeave={handleMouseUp}
-            className="flex cursor-grab snap-x snap-mandatory gap-4 overflow-x-auto px-2 py-4 select-none active:cursor-grabbing sm:gap-6 sm:px-8 touch-pan-x [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+            className="flex cursor-grab gap-4 overflow-x-auto px-2 py-4 select-none active:cursor-grabbing sm:gap-6 sm:px-8 touch-pan-x [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
           >
-            {CAROUSEL_BONUSES.map((item, index) => (
+            {CAROUSEL_BONUSES.map((item) => (
               <div
                 key={item.id}
-                onClick={() => {
-                  if (!hasMovedSignificantly.current) {
-                    scrollToCard(index);
-                  }
-                }}
-                className={`carousel-card aspect-square w-[92vw] max-w-[680px] shrink-0 snap-center overflow-hidden rounded-3xl border bg-white shadow-md transition-all duration-300 sm:w-[72vw] lg:w-[60vw] ${
-                  currentIndex === index
-                    ? "scale-[1.01] border-rose-400 ring-2 ring-rose-200 shadow-lg"
-                    : "border-slate-200/90 opacity-95 hover:border-slate-300"
-                }`}
+                className="carousel-card aspect-square w-[92vw] max-w-[680px] shrink-0 overflow-hidden rounded-3xl border border-slate-200/90 bg-white shadow-md sm:w-[72vw] lg:w-[60vw]"
               >
                 <div className="flex h-full w-full items-center justify-center overflow-hidden bg-white">
                   <img
@@ -163,12 +92,15 @@ export const WhatYouWillReceive: React.FC = () => {
             <input
               type="range"
               min={0}
-              max={CAROUSEL_BONUSES.length - 1}
-              step={1}
-              value={currentIndex}
-              onChange={(e) => scrollToCard(Number(e.target.value))}
+              max={100}
+              step={0.1}
+              value={scrollProgress}
+              onInput={(e) =>
+                handleSlider(Number((e.target as HTMLInputElement).value))
+              }
+              onChange={(e) => handleSlider(Number(e.target.value))}
               aria-label="Deslizar entre os materiais"
-              className="h-2 w-full cursor-pointer appearance-none rounded-full bg-rose-100 outline-none touch-pan-x
+              className="h-2 w-full cursor-ew-resize appearance-none rounded-full bg-rose-100 outline-none touch-pan-x
                 [&::-webkit-slider-thumb]:h-5
                 [&::-webkit-slider-thumb]:w-14
                 [&::-webkit-slider-thumb]:appearance-none
