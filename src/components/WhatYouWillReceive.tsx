@@ -162,7 +162,7 @@ export const WhatYouWillReceive: React.FC = () => {
             onMouseMove={handleMouseMove}
             onMouseUp={handleMouseUp}
             onMouseLeave={handleMouseUp}
-            className="flex gap-4 sm:gap-6 overflow-x-auto snap-x snap-mandatory py-4 px-6 sm:px-12 select-none cursor-grab active:cursor-grabbing touch-pan-x [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+            className="flex gap-4 sm:gap-6 overflow-x-auto snap-x snap-mandatory py-4 px-2 sm:px-8 select-none cursor-grab active:cursor-grabbing touch-pan-x [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
           >
             {CAROUSEL_BONUSES.map((item, index) => (
               <div
@@ -172,7 +172,7 @@ export const WhatYouWillReceive: React.FC = () => {
                     scrollToCard(index);
                   }
                 }}
-                className={`carousel-card snap-center shrink-0 w-[82vw] max-w-[360px] aspect-square rounded-3xl border bg-white shadow-md transition-all duration-300 overflow-hidden cursor-pointer touch-pan-y ${
+                className={`carousel-card snap-center shrink-0 w-[92vw] sm:w-[72vw] lg:w-[60vw] max-w-[680px] aspect-square rounded-3xl border bg-white shadow-md transition-all duration-300 overflow-hidden cursor-pointer touch-pan-y ${
                   currentIndex === index
                     ? "border-rose-400 ring-2 ring-rose-200 shadow-lg scale-[1.01]"
                     : "border-slate-200/90 hover:border-slate-300 opacity-95"
@@ -190,6 +190,22 @@ export const WhatYouWillReceive: React.FC = () => {
                 </div>
               </div>
             ))}
+          </div>
+
+          <div className="mx-auto mt-5 w-full max-w-2xl px-3">
+            <p className="mb-2 text-center text-xs font-bold text-slate-500 sm:text-sm">
+              Deslize para ver os materiais
+            </p>
+            <input
+              type="range"
+              min={0}
+              max={CAROUSEL_BONUSES.length - 1}
+              step={1}
+              value={currentIndex}
+              onChange={(e) => scrollToCard(Number(e.target.value))}
+              aria-label="Deslizar entre os materiais"
+              className="h-2 w-full cursor-pointer appearance-none rounded-full bg-rose-100 accent-rose-500 touch-pan-x"
+            />
           </div>
 
           {/* Mobile Navigation Controls & Dots */}
