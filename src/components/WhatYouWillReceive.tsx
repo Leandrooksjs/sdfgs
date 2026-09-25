@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import { ChevronLeft, ChevronRight, Heart } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { CAROUSEL_BONUSES } from "../data/content";
 
 export const WhatYouWillReceive: React.FC = () => {
@@ -172,35 +172,23 @@ export const WhatYouWillReceive: React.FC = () => {
                     scrollToCard(index);
                   }
                 }}
-                className={`carousel-card snap-center shrink-0 w-[82vw] max-w-[320px] sm:max-w-[360px] flex flex-col rounded-3xl border bg-white shadow-md transition-all duration-300 overflow-hidden cursor-pointer touch-pan-y ${
+                className={`carousel-card snap-center shrink-0 w-[82vw] max-w-[360px] aspect-square rounded-3xl border bg-white shadow-md transition-all duration-300 overflow-hidden cursor-pointer touch-pan-y ${
                   currentIndex === index
                     ? "border-rose-400 ring-2 ring-rose-200 shadow-lg scale-[1.01]"
                     : "border-slate-200/90 hover:border-slate-300 opacity-95"
                 }`}
               >
-                {/* Header idêntico à imagem de referência: azul suave com coração branco e BÔNUS 0X */}
-                <div className="w-full bg-[#8cb9e6] py-2 sm:py-2.5 px-3 flex items-center justify-center gap-1.5 select-none text-white shadow-xs">
-                  <Heart className="h-3.5 w-3.5 sm:h-4 sm:w-4 fill-white text-white shrink-0" aria-hidden="true" />
-                  <span className="font-black text-sm sm:text-base tracking-wide uppercase">
-                    BÔNUS {String(item.id).padStart(2, "0")}
-                  </span>
-                </div>
-
-                <div className="w-full bg-white flex items-center justify-center p-3 aspect-square overflow-hidden touch-pan-y">
+                <div className="w-full h-full bg-white flex items-center justify-center overflow-hidden touch-pan-y">
                   <img
                     src={item.imageSrc}
                     alt={item.alt}
                     draggable={false}
                     referrerPolicy="no-referrer"
-                    className="h-full w-full object-contain rounded-2xl select-none pointer-events-none"
+                    className="h-full w-full object-contain select-none pointer-events-none"
                     loading="lazy"
                   />
                 </div>
 
-                <div className="border-t border-slate-100 py-3.5 px-3 text-center bg-white flex flex-col items-center justify-center">
-                  <p className="text-xs sm:text-sm font-black text-slate-800 line-clamp-1 leading-snug">
-                    {item.title}
-                  </p>
                 </div>
               </div>
             ))}
