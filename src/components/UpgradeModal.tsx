@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { X, Sparkles, Tag, Check, ArrowRight } from "lucide-react";
 import { CHECKOUT_URLS, UPSELL_ITEMS } from "../data/content";
+import { getTrackedUrl, trackInitiateCheckout } from "../lib/tracking";
 
 interface UpgradeModalProps {
   open: boolean;
@@ -88,22 +89,22 @@ export const UpgradeModal: React.FC<UpgradeModalProps> = ({
           <div className="mt-4 space-y-2 sm:mt-6 sm:space-y-3">
             <a
               id="cta-popup-oferta"
-              href={CHECKOUT_URLS.OFERTA_UPSELL}
+              href={getTrackedUrl(CHECKOUT_URLS.OFERTA_UPSELL)}
               target="_blank"
               rel="noopener noreferrer"
               onClick={(e) => {
-                if (typeof window !== "undefined" && (window as any).fbq) {
-                  try {
-                    (window as any).fbq("track", "InitiateCheckout", {
-                      content_name: "Upsell Oferta 19,90",
-                      value: 19.9,
-                      currency: "BRL",
-                    });
-                  } catch {}
-                }
+                trackInitiateCheckout({
+                  contentName: "Plano Premium - Oferta do Pop-up",
+                  value: 19.9,
+                });
+
                 if (typeof window !== "undefined" && window.self !== window.top) {
                   e.preventDefault();
-                  window.open(CHECKOUT_URLS.OFERTA_UPSELL, "_blank");
+                  window.open(
+                    getTrackedUrl(CHECKOUT_URLS.OFERTA_UPSELL),
+                    "_blank",
+                    "noopener,noreferrer",
+                  );
                 }
               }}
               className="inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-rose-500 px-4 py-3 text-center text-sm font-extrabold tracking-tight text-white shadow-pink-cta transition-all duration-200 hover:-translate-y-0.5 hover:bg-rose-600 sm:px-6 sm:py-4 sm:text-lg cursor-pointer select-none"
@@ -115,11 +116,19 @@ export const UpgradeModal: React.FC<UpgradeModalProps> = ({
             <button
               type="button"
               id="cta-popup-recusar"
-              onClick={(e) => {
+              onClick={() => {
                 onOpenChange(false);
-                if (typeof window !== "undefined" && window.self !== window.top) {
-                  e.preventDefault();
-                  window.open(originalHref, "_blank");
+                trackInitiateCheckout({
+                  contentName: "Material Essencial",
+                  value: 10,
+                });
+
+                if (typeof window !== "undefined") {
+                  window.open(
+                    getTrackedUrl(originalHref),
+                    "_blank",
+                    "noopener,noreferrer",
+                  );
                 }
               }}
               className="inline-flex w-full items-center justify-center rounded-xl px-3 py-2.5 text-xs font-bold text-slate-500 transition-colors hover:text-slate-800 sm:px-4 sm:py-3 sm:text-sm cursor-pointer"
