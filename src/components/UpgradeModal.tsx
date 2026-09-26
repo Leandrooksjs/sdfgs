@@ -90,20 +90,16 @@ export const UpgradeModal: React.FC<UpgradeModalProps> = ({
             <a
               id="cta-popup-oferta"
               href={getTrackedUrl(CHECKOUT_URLS.OFERTA_UPSELL)}
-              target="_blank"
-              rel="noopener noreferrer"
               onClick={(e) => {
                 trackInitiateCheckout({
                   contentName: "Plano Premium - Oferta do Pop-up",
                   value: 19.9,
                 });
 
-                if (typeof window !== "undefined" && window.self !== window.top) {
+                if (typeof window !== "undefined") {
                   e.preventDefault();
-                  window.open(
+                  window.location.assign(
                     getTrackedUrl(CHECKOUT_URLS.OFERTA_UPSELL),
-                    "_blank",
-                    "noopener,noreferrer",
                   );
                 }
               }}
@@ -124,10 +120,8 @@ export const UpgradeModal: React.FC<UpgradeModalProps> = ({
                 });
 
                 if (typeof window !== "undefined") {
-                  window.open(
+                  window.location.assign(
                     getTrackedUrl(CHECKOUT_URLS.ESSENCIAL),
-                    "_blank",
-                    "noopener,noreferrer",
                   );
                 }
               }}
