@@ -61,15 +61,19 @@ export const UpgradeModal: React.FC<UpgradeModalProps> = ({
             </div>
 
             <h3 className="text-xl font-black tracking-tight text-slate-900 sm:text-3xl leading-snug">
-              Por apenas <span className="text-rose-600">R$ 7,10</span>
+              Plano completo por <span className="text-rose-600">R$ 19,90</span>
             </h3>
 
             <p className="text-sm font-black text-slate-700 sm:text-base">
-              Valor cheio: <span className="text-slate-500">R$ 19,90</span>
+              Valor normal: <span className="text-slate-600">R$ 27,00</span>
             </p>
 
+            <div className="mx-auto inline-flex items-center justify-center rounded-full bg-emerald-50 px-3 py-1.5 text-xs font-black text-emerald-700 sm:text-sm">
+              Você economiza R$ 7,10 nesta oferta
+            </div>
+
             <p className="text-xs font-medium text-slate-600 sm:text-base">
-              Você está prestes a finalizar. Aproveite e garanta todos os +100 Mapas Mentais com bônus exclusivos e desconto imperdível.
+              Você está prestes a finalizar. Aproveite e garanta todos os +120 Mapas Mentais com bônus exclusivos por um valor especial.
             </p>
           </div>
 
@@ -97,7 +101,7 @@ export const UpgradeModal: React.FC<UpgradeModalProps> = ({
               onClick={(e) => {
                 trackInitiateCheckout({
                   contentName: "Plano Premium - Oferta do Pop-up",
-                  value: 7.1,
+                  value: 19.9,
                 });
 
                 if (typeof window !== "undefined") {
