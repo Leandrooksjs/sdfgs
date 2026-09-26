@@ -1,0 +1,15 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "images": {
+    "sizes": [320, 480, 640, 828, 1080],
+    "localPatterns": [
+      {
+        "pathname": "^/images/.*$",
+        "search": ""
+      }
+    ],
+    "minimumCacheTTL": 2592000,
+    "qualities": [60, 70, 75, 80],
+    "formats": ["image/avif", "image/webp"]
+  }
+}
