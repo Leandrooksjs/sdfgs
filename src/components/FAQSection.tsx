@@ -13,7 +13,7 @@ export const FAQSection: React.FC = () => {
   return (
     <section
       id="faq"
-      className="bg-transparent px-4 py-14 sm:py-20 text-slate-800"
+      className="perf-section bg-transparent px-4 py-14 sm:py-20 text-slate-800"
     >
       <div className="mx-auto max-w-3xl">
         <h2 className="text-center text-2xl font-black tracking-tight text-slate-900 sm:text-4xl">
