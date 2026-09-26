@@ -3,14 +3,17 @@ import { ShieldCheck } from "lucide-react";
 
 export const GuaranteeSection: React.FC = () => {
   return (
-    <section id="garantia" className="bg-transparent px-4 py-12 sm:py-16 text-slate-800">
+    <section id="garantia" className="perf-section bg-transparent px-4 py-12 sm:py-16 text-slate-800">
       <div className="mx-auto grid max-w-5xl items-center gap-8 rounded-3xl bg-white border border-rose-100/60 shadow-xs p-6 sm:p-10 lg:grid-cols-[260px_minmax(0,1fr)]">
         <div className="flex justify-center">
           <div className="relative h-44 w-44 sm:h-52 sm:w-52 rounded-full overflow-hidden shadow-md flex items-center justify-center bg-slate-950">
             <img
               src="/images/garantia-30d.jpg"
               alt="Selo de garantia de 30 dias"
+              width={1000}
+              height={1000}
               loading="lazy"
+              decoding="async"
               className="h-full w-full object-cover scale-[1.05]"
             />
           </div>
