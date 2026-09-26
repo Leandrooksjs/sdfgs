@@ -61,16 +61,13 @@ export const UpgradeModal: React.FC<UpgradeModalProps> = ({
             </div>
 
             <h3 className="text-xl font-black tracking-tight text-slate-900 sm:text-3xl leading-snug">
-              Plano completo por <span className="text-rose-600">R$ 19,90</span>
+              Economize <span className="text-rose-600">R$ 7,10</span>
             </h3>
 
             <p className="text-sm font-black text-slate-700 sm:text-base">
-              Valor normal: <span className="text-slate-600">R$ 27,00</span>
+              <span className="text-slate-400 line-through">R$ 27,00</span>{" "}
+              <span className="text-slate-900">por R$ 19,90</span>
             </p>
-
-            <div className="mx-auto inline-flex items-center justify-center rounded-full bg-emerald-50 px-3 py-1.5 text-xs font-black text-emerald-700 sm:text-sm">
-              Você economiza R$ 7,10 nesta oferta
-            </div>
 
             <p className="text-xs font-medium text-slate-600 sm:text-base">
               Você está prestes a finalizar. Aproveite e garanta todos os +120 Mapas Mentais com bônus exclusivos por um valor especial.
