@@ -15,7 +15,7 @@ export const HeroSection: React.FC = () => {
         <a
           id="hero-mockup-link"
           href="#ofertas"
-          className="mx-auto mt-6 block w-full max-w-[24rem] sm:mt-10 sm:max-w-3xl group cursor-pointer"
+          className="mx-auto mt-6 block w-full max-w-[21.5rem] sm:mt-10 sm:max-w-2xl group cursor-pointer"
         >
           <div className="relative mx-auto flex items-center justify-center">
             <img
