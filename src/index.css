@@ -36,7 +36,7 @@
 /* Evita trabalho de layout/renderização em seções muito abaixo da dobra. */
 .perf-section {
   content-visibility: auto;
-  contain-intrinsic-size: 760px;
+  contain-intrinsic-size: auto 760px;
 }
 
 @media (prefers-reduced-motion: reduce) {
