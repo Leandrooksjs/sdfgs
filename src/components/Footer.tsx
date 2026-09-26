@@ -2,7 +2,7 @@ import React from "react";
 
 export const Footer: React.FC = () => {
   return (
-    <footer id="rodape" className="bg-transparent px-4 py-12 text-slate-600 border-t border-rose-100/60">
+    <footer id="rodape" className="perf-section bg-transparent px-4 py-12 text-slate-600 border-t border-rose-100/60">
       <div className="mx-auto max-w-5xl text-center">
         <nav
           aria-label="Links institucionais"
