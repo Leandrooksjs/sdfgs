@@ -125,7 +125,7 @@ export const UpgradeModal: React.FC<UpgradeModalProps> = ({
 
                 if (typeof window !== "undefined") {
                   window.open(
-                    getTrackedUrl(originalHref),
+                    getTrackedUrl(CHECKOUT_URLS.ESSENCIAL),
                     "_blank",
                     "noopener,noreferrer",
                   );
