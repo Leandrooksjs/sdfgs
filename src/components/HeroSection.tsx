@@ -1,6 +1,5 @@
 import React from "react";
 import { CTAButton } from "./CTAButton";
-import heroMockup from "../assets/images/mockup_headline_mapas_1790346156693.jpg";
 
 export const HeroSection: React.FC = () => {
   return (
@@ -20,10 +19,10 @@ export const HeroSection: React.FC = () => {
         >
           <div className="relative mx-auto flex items-center justify-center">
             <img
-              src={heroMockup}
+              src="/images/ChatGPT Image Sep 25, 2026, 08_56_45 PM.png"
               alt="Mockup +120 Mapas Mentais Socioemocionais Infantil"
               referrerPolicy="no-referrer"
-              className="mx-auto w-full object-contain mix-blend-multiply transition-transform duration-300 group-hover:scale-[1.02]"
+              className="mx-auto w-full object-contain transition-transform duration-300 group-hover:scale-[1.02]"
               loading="eager"
             />
           </div>
