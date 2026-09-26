@@ -35,8 +35,11 @@ export const BonusSection: React.FC = () => {
                   />
                 </div>
 
-                <p className="mt-3 px-1 pb-1 text-center text-sm font-extrabold leading-snug text-slate-800 sm:text-base">
+                <p className="mt-3 px-1 text-center text-sm font-extrabold leading-snug text-slate-800 sm:text-base">
                   {bonus.title}
+                </p>
+                <p className="mt-1.5 px-1 pb-1 text-center text-[11px] font-medium leading-relaxed text-slate-500 sm:text-xs">
+                  {bonus.description}
                 </p>
               </div>
             ))}
