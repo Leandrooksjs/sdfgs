@@ -65,7 +65,7 @@ export const UpgradeModal: React.FC<UpgradeModalProps> = ({
             </h3>
 
             <p className="text-sm font-black text-slate-700 sm:text-base">
-              Valor cheio: <span className="text-slate-500 line-through">R$ 19,90</span>
+              Valor cheio: <span className="text-slate-500">R$ 19,90</span>
             </p>
 
             <p className="text-xs font-medium text-slate-600 sm:text-base">
