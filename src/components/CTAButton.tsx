@@ -46,9 +46,9 @@ export const CTAButton: React.FC<CTAButtonProps> = ({
       return;
     }
 
-    if (isExternal && typeof window !== "undefined" && window.self !== window.top) {
+    if (isExternal && typeof window !== "undefined") {
       e.preventDefault();
-      window.open(trackedHref, "_blank", "noopener,noreferrer");
+      window.location.assign(trackedHref);
     }
   };
 
@@ -64,8 +64,6 @@ export const CTAButton: React.FC<CTAButtonProps> = ({
     <a
       id={id}
       href={trackedHref}
-      target={isExternal ? "_blank" : undefined}
-      rel={isExternal ? "noopener noreferrer" : undefined}
       onClick={handleClick}
       className={`${baseClasses} ${variantClasses} ${className}`}
     >
