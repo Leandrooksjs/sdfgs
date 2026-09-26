@@ -1,5 +1,6 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
+import { getTrackedUrl, trackInitiateCheckout } from "../lib/tracking";
 
 interface CTAButtonProps {
   id?: string;
@@ -9,6 +10,9 @@ interface CTAButtonProps {
   className?: string;
   showArrow?: boolean;
   onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
+  trackCheckout?: boolean;
+  trackingName?: string;
+  trackingValue?: number;
 }
 
 export const CTAButton: React.FC<CTAButtonProps> = ({
@@ -19,26 +23,32 @@ export const CTAButton: React.FC<CTAButtonProps> = ({
   className = "",
   showArrow = true,
   onClick,
+  trackCheckout,
+  trackingName,
+  trackingValue,
 }) => {
   const isExternal = href.startsWith("http://") || href.startsWith("https://");
+  const trackedHref = isExternal ? getTrackedUrl(href) : href;
+  const shouldTrackCheckout = trackCheckout ?? isExternal;
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    if (typeof window !== "undefined" && (window as any).fbq) {
-      try {
-        (window as any).fbq("track", "InitiateCheckout", {
-          content_name: typeof children === "string" ? children : "Quero comprar",
-        });
-      } catch {}
+    if (shouldTrackCheckout && isExternal) {
+      trackInitiateCheckout({
+        contentName:
+          trackingName ||
+          (typeof children === "string" ? children : "Quero comprar"),
+        value: trackingValue,
+      });
     }
+
     if (onClick) {
       onClick(e);
       return;
     }
-    if (isExternal && typeof window !== "undefined") {
-      if (window.self !== window.top) {
-        e.preventDefault();
-        window.open(href, "_blank", "noopener,noreferrer");
-      }
+
+    if (isExternal && typeof window !== "undefined" && window.self !== window.top) {
+      e.preventDefault();
+      window.open(trackedHref, "_blank", "noopener,noreferrer");
     }
   };
 
@@ -53,7 +63,7 @@ export const CTAButton: React.FC<CTAButtonProps> = ({
   return (
     <a
       id={id}
-      href={href}
+      href={trackedHref}
       target={isExternal ? "_blank" : undefined}
       rel={isExternal ? "noopener noreferrer" : undefined}
       onClick={handleClick}
