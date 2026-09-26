@@ -1,5 +1,6 @@
 import React from "react";
 import { ShieldCheck } from "lucide-react";
+import { optimizedImage } from "../lib/images";
 
 export const GuaranteeSection: React.FC = () => {
   return (
@@ -8,10 +9,10 @@ export const GuaranteeSection: React.FC = () => {
         <div className="flex justify-center">
           <div className="relative h-44 w-44 sm:h-52 sm:w-52 rounded-full overflow-hidden shadow-md flex items-center justify-center bg-slate-950">
             <img
-              src="/images/garantia-30d.jpg"
+              src={optimizedImage("/images/garantia-30d.jpg", 320, 70)}
               alt="Selo de garantia de 30 dias"
-              width={1000}
-              height={1000}
+              width={320}
+              height={320}
               loading="lazy"
               decoding="async"
               className="h-full w-full object-cover scale-[1.05]"
