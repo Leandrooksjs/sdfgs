@@ -59,6 +59,9 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onOpenUpgradeMod
                     width={1000}
                     height={1000}
                     decoding="async"
+                    width={1000}
+                    height={1000}
+                    decoding="async"
                     className="mx-auto h-auto w-full max-w-[18rem] rounded-2xl object-contain drop-shadow"
                     loading="lazy"
                   />
