@@ -1,6 +1,7 @@
 import React from "react";
 import { EXCLUSIVE_BONUSES } from "../data/content";
 import { DeferredImage } from "./DeferredImage";
+import { optimizedImage } from "../lib/images";
 
 export const BonusSection: React.FC = () => {
   return (
@@ -29,10 +30,10 @@ export const BonusSection: React.FC = () => {
               >
                 <div className="aspect-square w-full overflow-hidden rounded-2xl bg-white">
                   <DeferredImage
-                    src={bonus.imageSrc}
+                    src={optimizedImage(bonus.imageSrc, 320, 70)}
                     alt={bonus.alt}
-                    width={1254}
-                    height={1254}
+                    width={320}
+                    height={320}
                     rootMargin="160px"
                     className="h-full w-full object-contain"
                   />
