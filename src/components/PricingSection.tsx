@@ -11,7 +11,7 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onOpenUpgradeMod
   return (
     <section
       id="ofertas"
-      className="bg-transparent px-4 py-14 sm:py-20 text-slate-800"
+      className="perf-section bg-transparent px-4 py-14 sm:py-20 text-slate-800"
     >
       <div className="mx-auto max-w-6xl">
         <h2 className="text-center text-2xl font-black tracking-tight text-slate-900 sm:text-4xl">
@@ -56,6 +56,9 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onOpenUpgradeMod
                   <img
                     src={plan.mockupImage}
                     alt={plan.mockupAlt || "Mockup do produto"}
+                    width={1000}
+                    height={1000}
+                    decoding="async"
                     className="mx-auto h-auto w-full max-w-[18rem] rounded-2xl object-contain drop-shadow"
                     loading="lazy"
                   />
