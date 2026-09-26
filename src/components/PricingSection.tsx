@@ -2,6 +2,7 @@ import React from "react";
 import { Check, X, Star } from "lucide-react";
 import { PRICING_PLANS } from "../data/content";
 import { CTAButton } from "./CTAButton";
+import { optimizedImage } from "../lib/images";
 
 interface PricingSectionProps {
   onOpenUpgradeModal: (originalHref: string) => void;
@@ -54,13 +55,10 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onOpenUpgradeMod
               {plan.mockupImage && (
                 <div className="mt-5">
                   <img
-                    src={plan.mockupImage}
+                    src={optimizedImage(plan.mockupImage, 320, 70)}
                     alt={plan.mockupAlt || "Mockup do produto"}
-                    width={1000}
-                    height={1000}
-                    decoding="async"
-                    width={1000}
-                    height={1000}
+                    width={320}
+                    height={320}
                     decoding="async"
                     className="mx-auto h-auto w-full max-w-[18rem] rounded-2xl object-contain drop-shadow"
                     loading="lazy"
