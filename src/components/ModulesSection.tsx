@@ -44,7 +44,7 @@ export const ModulesSection: React.FC = () => {
       <div className="mx-auto max-w-6xl">
         <div className="text-center">
           <h2 className="text-2xl font-black tracking-tight text-slate-900 sm:text-4xl">
-            MÓDULOS DOS ENTREGÁVEIS
+            CONHEÇA OS MÓDULOS
           </h2>
         </div>
 
