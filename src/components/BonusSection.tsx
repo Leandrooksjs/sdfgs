@@ -1,11 +1,12 @@
 import React from "react";
 import { EXCLUSIVE_BONUSES } from "../data/content";
+import { DeferredImage } from "./DeferredImage";
 
 export const BonusSection: React.FC = () => {
   return (
     <section
       id="bonus-exclusivos"
-      className="bg-transparent px-4 py-12 text-slate-800 sm:py-16"
+      className="perf-section bg-transparent px-4 py-12 text-slate-800 sm:py-16"
     >
       <div className="mx-auto max-w-7xl">
         <div className="text-center">
@@ -27,11 +28,13 @@ export const BonusSection: React.FC = () => {
                 className="w-[220px] shrink-0 overflow-hidden rounded-3xl border border-slate-200 bg-white p-3 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:border-rose-300 hover:shadow-md sm:w-[240px]"
               >
                 <div className="aspect-square w-full overflow-hidden rounded-2xl bg-white">
-                  <img
+                  <DeferredImage
                     src={bonus.imageSrc}
                     alt={bonus.alt}
+                    width={1254}
+                    height={1254}
+                    rootMargin="160px"
                     className="h-full w-full object-contain"
-                    loading="lazy"
                   />
                 </div>
 
