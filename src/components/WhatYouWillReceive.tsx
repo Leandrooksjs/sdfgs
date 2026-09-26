@@ -106,7 +106,7 @@ export const WhatYouWillReceive: React.FC = () => {
       <div className="mx-auto max-w-6xl">
         <div className="mb-8 text-center sm:mb-12">
           <h2 className="text-2xl font-black tracking-tight text-slate-900 sm:text-4xl">
-            VEJA NA PRÁTICA TUDO O QUE VOCÊ VAI RECEBER
+            VEJA NA PRÁTICA UM POUCO DO QUE VOCÊ VAI RECEBER
           </h2>
         </div>
 
