@@ -8,6 +8,7 @@ import { PricingSection } from "./components/PricingSection";
 import { GuaranteeSection } from "./components/GuaranteeSection";
 import { FAQSection } from "./components/FAQSection";
 import { Footer } from "./components/Footer";
+import { FloatingCartButton } from "./components/FloatingCartButton";
 
 const UpgradeModal = lazy(() =>
   import("./components/UpgradeModal").then((module) => ({
@@ -48,6 +49,7 @@ export default function App() {
       <GuaranteeSection />
       <FAQSection />
       <Footer />
+      <FloatingCartButton />
 
       {modalOpen && (
         <Suspense fallback={null}>
