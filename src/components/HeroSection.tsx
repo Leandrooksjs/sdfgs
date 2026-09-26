@@ -1,5 +1,6 @@
 import React from "react";
 import { CTAButton } from "./CTAButton";
+import { optimizedImage } from "../lib/images";
 
 export const HeroSection: React.FC = () => {
   return (
@@ -19,11 +20,13 @@ export const HeroSection: React.FC = () => {
         >
           <div className="relative mx-auto flex items-center justify-center">
             <img
-              src="/images/ChatGPT Image Sep 25, 2026, 08_56_45 PM.png"
+              src={optimizedImage("/images/ChatGPT Image Sep 25, 2026, 08_56_45 PM.png", 640, 70)}
+              srcSet={`${optimizedImage("/images/ChatGPT Image Sep 25, 2026, 08_56_45 PM.png", 480, 70)} 480w, ${optimizedImage("/images/ChatGPT Image Sep 25, 2026, 08_56_45 PM.png", 640, 70)} 640w`}
+              sizes="(max-width: 640px) 344px, 640px"
               alt="Mockup +120 Mapas Mentais Socioemocionais Infantil"
               referrerPolicy="no-referrer"
-              width={1254}
-              height={1254}
+              width={640}
+              height={640}
               fetchPriority="high"
               decoding="async"
               className="mx-auto h-auto w-full object-contain transition-transform duration-300 group-hover:scale-[1.02]"
