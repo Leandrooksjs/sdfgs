@@ -4,7 +4,6 @@ import { TopUrgencyBanner } from "./components/TopUrgencyBanner";
 import { HeroSection } from "./components/HeroSection";
 import { WhatYouWillReceive } from "./components/WhatYouWillReceive";
 import { BonusSection } from "./components/BonusSection";
-import { ModulesSection } from "./components/ModulesSection";
 import { PricingSection } from "./components/PricingSection";
 import { GuaranteeSection } from "./components/GuaranteeSection";
 import { FAQSection } from "./components/FAQSection";
@@ -26,7 +25,6 @@ export default function App() {
       <TopUrgencyBanner />
       <HeroSection />
       <WhatYouWillReceive />
-      <ModulesSection />
       <BonusSection />
       <PricingSection onOpenUpgradeModal={handleOpenUpgradeModal} />
       <GuaranteeSection />
