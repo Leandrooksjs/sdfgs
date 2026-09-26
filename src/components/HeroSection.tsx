@@ -22,7 +22,11 @@ export const HeroSection: React.FC = () => {
               src="/images/ChatGPT Image Sep 25, 2026, 08_56_45 PM.png"
               alt="Mockup +120 Mapas Mentais Socioemocionais Infantil"
               referrerPolicy="no-referrer"
-              className="mx-auto w-full object-contain transition-transform duration-300 group-hover:scale-[1.02]"
+              width={1254}
+              height={1254}
+              fetchPriority="high"
+              decoding="async"
+              className="mx-auto h-auto w-full object-contain transition-transform duration-300 group-hover:scale-[1.02]"
               loading="eager"
             />
           </div>
