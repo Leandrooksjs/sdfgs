@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import { CAROUSEL_BONUSES } from "../data/content";
 import { DeferredImage } from "./DeferredImage";
+import { optimizedImage } from "../lib/images";
 
 export const WhatYouWillReceive: React.FC = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -128,10 +129,10 @@ export const WhatYouWillReceive: React.FC = () => {
               >
                 <div className="flex h-full w-full items-center justify-center overflow-hidden bg-white">
                   <DeferredImage
-                    src={item.imageSrc}
+                    src={optimizedImage(item.imageSrc, 640, 70)}
                     alt={item.alt}
-                    width={1254}
-                    height={1254}
+                    width={640}
+                    height={640}
                     draggable={false}
                     referrerPolicy="no-referrer"
                     rootMargin="180px"
