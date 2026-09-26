@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>+100 Mapas Mentais Socioemocionais para Educação Infantil</title>
+    <title>+120 Mapas Mentais Socioemocionais Infantil</title>
     <meta name="description" content="A forma de Educar Emocionalmente Sem Cartilha, sem trabalhar com apostilas e Com Diálogo de Verdade. +100 Mapas Mentais prontos para transformar sua sala de aula." />
     <meta property="og:title" content="+100 Mapas Mentais Socioemocionais para Educação Infantil" />
     <meta property="og:description" content="A forma de Educar Emocionalmente Sem Cartilha, sem trabalhar com apostilas e Com Diálogo de Verdade." />
@@ -11,51 +11,95 @@
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
-    <!-- Meta Pixel -->
+    <!-- LCP: descoberta imediata da imagem principal -->
+    <link
+      rel="preload"
+      as="image"
+      href="/images/ChatGPT%20Image%20Sep%2025,%202026,%2008_56_45%20PM.png"
+      fetchpriority="high"
+    />
+
+    <!-- Tracking: a fila do Meta existe imediatamente, mas scripts pesados
+         só são baixados depois que o DOM crítico já foi renderizado. -->
     <script>
-      !(function (f, b, e, v, n, t, s) {
-        if (f.fbq) return;
-        n = f.fbq = function () {
-          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
-        };
-        if (!f._fbq) f._fbq = n;
-        n.push = n;
-        n.loaded = true;
-        n.version = "2.0";
-        n.queue = [];
-        t = b.createElement(e);
-        t.async = true;
-        t.src = v;
-        s = b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t, s);
-      })(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
+      (function () {
+        if (!window.fbq) {
+          var fbq = (window.fbq = function () {
+            fbq.callMethod
+              ? fbq.callMethod.apply(fbq, arguments)
+              : fbq.queue.push(arguments);
+          });
+          if (!window._fbq) window._fbq = fbq;
+          fbq.push = fbq;
+          fbq.loaded = false;
+          fbq.version = "2.0";
+          fbq.queue = [];
+        }
 
-      fbq("init", "1060282419958480");
-      fbq("track", "PageView");
+        window.pixelId = "6ab2b6c260b46abc40589bc9";
+        window.fbq("init", "1060282419958480");
+        window.fbq("track", "PageView");
+
+        var metaLoaded = false;
+        var utmLoaded = false;
+
+        function runIdle(callback, timeout) {
+          if ("requestIdleCallback" in window) {
+            window.requestIdleCallback(callback, { timeout: timeout });
+          } else {
+            window.setTimeout(callback, Math.min(timeout, 1500));
+          }
+        }
+
+        function loadMetaPixel() {
+          if (metaLoaded) return;
+          metaLoaded = true;
+          var script = document.createElement("script");
+          script.src = "https://connect.facebook.net/en_US/fbevents.js";
+          script.async = true;
+          document.head.appendChild(script);
+        }
+
+        function loadUtmify() {
+          if (utmLoaded) return;
+          utmLoaded = true;
+
+          var utms = document.createElement("script");
+          utms.src = "https://cdn.utmify.com.br/scripts/utms/latest.js";
+          utms.async = true;
+          utms.defer = true;
+          utms.setAttribute("data-utmify-prevent-xcod-sck", "");
+          utms.setAttribute("data-utmify-prevent-subids", "");
+          document.head.appendChild(utms);
+
+          var pixel = document.createElement("script");
+          pixel.src = "https://cdn.utmify.com.br/scripts/pixel/pixel.js";
+          pixel.async = true;
+          pixel.defer = true;
+          document.head.appendChild(pixel);
+        }
+
+        if (document.readyState === "loading") {
+          document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+              runIdle(loadMetaPixel, 2500);
+            },
+            { once: true },
+          );
+        } else {
+          runIdle(loadMetaPixel, 2500);
+        }
+
+        window.addEventListener(
+          "load",
+          function () {
+            runIdle(loadUtmify, 4000);
+          },
+          { once: true },
+        );
+      })();
     </script>
-
-    <!-- UTMify: captura e preservação de UTMs -->
-    <script
-      src="https://cdn.utmify.com.br/scripts/utms/latest.js"
-      data-utmify-prevent-xcod-sck
-      data-utmify-prevent-subids
-      async
-      defer
-    ></script>
-
-    <!-- UTMify Pixel -->
-    <script>
-      window.pixelId = "6ab2b6c260b46abc40589bc9";
-    </script>
-    <script
-      src="https://cdn.utmify.com.br/scripts/pixel/pixel.js"
-      async
-      defer
-    ></script>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
   </head>
   <body class="font-sans antialiased text-slate-800 selection:bg-rose-100 selection:text-rose-900">
     <noscript>
