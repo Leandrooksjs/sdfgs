@@ -8,7 +8,7 @@ export const HeroSection: React.FC = () => {
       className="bg-transparent px-4 py-8 sm:py-16 text-slate-800"
     >
       <div className="mx-auto max-w-4xl text-center">
-        <h1 className="text-2xl leading-tight font-black tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
+        <h1 className="text-[1.7rem] leading-[1.12] font-black tracking-tight text-slate-900 sm:text-5xl sm:leading-tight lg:text-6xl">
           <span className="text-rose-500">+120</span> Mapas Mentais Socioemocionais Infantil
         </h1>
 
