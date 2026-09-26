@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import { CAROUSEL_BONUSES } from "../data/content";
+import { DeferredImage } from "./DeferredImage";
 
 export const WhatYouWillReceive: React.FC = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -101,7 +102,7 @@ export const WhatYouWillReceive: React.FC = () => {
   return (
     <section
       id="o-que-vai-receber"
-      className="bg-transparent px-4 py-12 text-slate-800 sm:py-16"
+      className="perf-section bg-transparent px-4 py-12 text-slate-800 sm:py-16"
     >
       <div className="mx-auto max-w-6xl">
         <div className="mb-8 text-center sm:mb-12">
@@ -126,13 +127,15 @@ export const WhatYouWillReceive: React.FC = () => {
                 className="carousel-card aspect-square w-[92vw] max-w-[680px] shrink-0 overflow-hidden rounded-3xl border border-slate-200/90 bg-white shadow-md sm:w-[72vw] lg:w-[60vw]"
               >
                 <div className="flex h-full w-full items-center justify-center overflow-hidden bg-white">
-                  <img
+                  <DeferredImage
                     src={item.imageSrc}
                     alt={item.alt}
+                    width={1254}
+                    height={1254}
                     draggable={false}
                     referrerPolicy="no-referrer"
+                    rootMargin="180px"
                     className="pointer-events-none h-full w-full select-none object-contain"
-                    loading="lazy"
                   />
                 </div>
               </div>
