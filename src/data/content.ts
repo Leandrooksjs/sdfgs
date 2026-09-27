@@ -161,7 +161,7 @@ export const PRICING_PLANS: PricingPlan[] = [
     featured: true,
     badge: "Mais Escolhido pelas Professoras",
     title: "Plano Premium Completo",
-    mockupImage: "/images/mockup-mapas-mentais.jpg",
+    mockupImage: "/images/ChatGPT Image Sep 25, 2026, 08_56_45 PM.png",
     mockupAlt: "Mockup do Plano Premium +120 Mapas Mentais Socioemocionais",
     items: [
       { label: "+120 Mapas Mentais" },
