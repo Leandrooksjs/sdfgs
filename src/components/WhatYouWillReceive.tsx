@@ -120,7 +120,7 @@ export const WhatYouWillReceive: React.FC = () => {
             onPointerMove={handleCarouselPointerMove}
             onPointerUp={handleCarouselPointerEnd}
             onPointerCancel={handleCarouselPointerEnd}
-            className="flex cursor-grab gap-4 overflow-x-auto px-2 py-4 select-none active:cursor-grabbing sm:gap-6 sm:px-8 touch-pan-x [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+            className="flex cursor-grab gap-4 overflow-x-auto px-2 py-4 select-none active:cursor-grabbing sm:gap-6 sm:px-8 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
           >
             {CAROUSEL_BONUSES.map((item) => (
               <div
@@ -177,7 +177,7 @@ export const WhatYouWillReceive: React.FC = () => {
                   setCarouselProgress(100);
                 }
               }}
-              className="relative h-5 w-full cursor-ew-resize touch-none select-none outline-none"
+              className="relative h-5 w-full cursor-ew-resize touch-pan-y select-none outline-none"
             >
               <div className="absolute top-1/2 h-2 w-full -translate-y-1/2 rounded-full bg-rose-100" />
               <div
