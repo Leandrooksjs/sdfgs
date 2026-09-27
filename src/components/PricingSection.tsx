@@ -53,7 +53,7 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onOpenUpgradeMod
               )}
 
               {plan.mockupImage && (
-                <div className="relative mt-5">
+                <div className="mt-5">
                   <img
                     src={optimizedImage(plan.mockupImage, 320, 70)}
                     alt={plan.mockupAlt || "Mockup do produto"}
@@ -63,19 +63,6 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onOpenUpgradeMod
                     className="mx-auto h-auto w-full max-w-[18rem] rounded-2xl object-contain drop-shadow"
                     loading="lazy"
                   />
-                  {plan.id === "plano-completo" && (
-                    <div
-                      className="pointer-events-none absolute left-1/2 top-5 w-[72%] max-w-[13rem] -translate-x-1/2 rounded-xl bg-white/95 px-3 py-2 text-center shadow-sm ring-1 ring-rose-100"
-                      aria-hidden="true"
-                    >
-                      <span className="block text-xl font-black leading-none text-rose-500 sm:text-2xl">
-                        +120
-                      </span>
-                      <span className="mt-1 block text-[10px] font-black uppercase tracking-wide text-slate-800 sm:text-xs">
-                        Mapas Mentais Socioemocionais
-                      </span>
-                    </div>
-                  )}
                 </div>
               )}
 
