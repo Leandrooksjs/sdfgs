@@ -142,9 +142,9 @@ export const PRICING_PLANS: PricingPlan[] = [
   {
     id: "plano-essencial",
     title: "Material Essencial",
-    subtitle: "+100 Mapas Mentais Socioemocionais",
+    subtitle: "+120 Mapas Mentais Socioemocionais",
     items: [
-      { label: "+100 Mapas Mentais Socioemocionais" },
+      { label: "+120 Mapas Mentais Socioemocionais" },
       { label: "Guia Prático de Aplicação em Sala" },
       { label: "Arquivos em PDF de alta qualidade para impressão" },
       { label: "Acesso imediato no e-mail" },
@@ -162,9 +162,9 @@ export const PRICING_PLANS: PricingPlan[] = [
     badge: "Mais Escolhido pelas Professoras",
     title: "Plano Premium Completo",
     mockupImage: "/images/mockup-mapas-mentais.jpg",
-    mockupAlt: "Mockup do Plano Premium +100 Mapas Mentais Socioemocionais",
+    mockupAlt: "Mockup do Plano Premium +120 Mapas Mentais Socioemocionais",
     items: [
-      { label: "+100 Mapas Mentais" },
+      { label: "+120 Mapas Mentais" },
       { label: "Guia Prático" },
       { label: "Cartas de Perguntas" },
       { label: "Diário das Emoções" },
@@ -187,7 +187,7 @@ export const PRICING_PLANS: PricingPlan[] = [
 ];
 
 export const UPSELL_ITEMS = [
-  "+100 Mapas Mentais Socioemocionais",
+  "+120 Mapas Mentais Socioemocionais",
   "Guia Prático",
   "Cartas de Perguntas",
   "Diário das Emoções",
