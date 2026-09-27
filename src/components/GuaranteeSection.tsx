@@ -26,7 +26,7 @@ export const GuaranteeSection: React.FC = () => {
           </h2>
 
           <p className="mt-4 text-sm leading-relaxed text-slate-600 sm:text-base font-medium">
-            Após realizar a compra, você poderá acessar, baixar e explorar todos os +100 Mapas Mentais Socioemocionais e todos os bônus. Se por qualquer motivo você achar que o material não atende às suas expectativas, basta solicitar o reembolso integral dentro de 30 dias com apenas 1 clique.
+            Após realizar a compra, você poderá acessar, baixar e explorar todos os +120 Mapas Mentais Socioemocionais e todos os bônus. Se por qualquer motivo você achar que o material não atende às suas expectativas, basta solicitar o reembolso integral dentro de 30 dias com apenas 1 clique.
           </p>
 
           <div className="mt-5">
