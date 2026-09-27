@@ -23,7 +23,7 @@ export const Footer: React.FC = () => {
         </nav>
 
         <p className="mt-6 text-xs text-slate-500 sm:text-sm font-semibold">
-          © 2026 +100 Mapas Mentais Socioemocionais para Educação Infantil. Todos os direitos reservados.
+          © 2026 +120 Mapas Mentais Socioemocionais para Educação Infantil. Todos os direitos reservados.
         </p>
 
         <p className="mx-auto mt-4 max-w-3xl text-xs leading-relaxed text-slate-400">
