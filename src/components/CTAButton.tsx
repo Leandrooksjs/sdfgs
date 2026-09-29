@@ -40,6 +40,11 @@ export const CTAButton: React.FC<CTAButtonProps> = ({
     if (isExternal && typeof window !== "undefined") {
       e.preventDefault();
 
+      // UTMify may decorate the anchor href after React has rendered it.
+      // Read the live DOM href at click time instead of using the old value
+      // captured during render.
+      const destinationHref = e.currentTarget.href || trackedHref;
+
       if (shouldTrackCheckout) {
         trackInitiateCheckout({
           contentName:
@@ -49,12 +54,12 @@ export const CTAButton: React.FC<CTAButtonProps> = ({
         });
 
         window.setTimeout(() => {
-          window.location.assign(trackedHref);
+          window.location.assign(destinationHref);
         }, 180);
         return;
       }
 
-      window.location.assign(trackedHref);
+      window.location.assign(destinationHref);
     }
   };
 
