@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { X, Sparkles, Tag, Check, ArrowRight } from "lucide-react";
 import { CHECKOUT_URLS, UPSELL_ITEMS } from "../data/content";
-import { getTrackedUrl, trackInitiateCheckout } from "../lib/tracking";
+import { getTrackedUrl } from "../lib/tracking";
 
 interface UpgradeModalProps {
   open: boolean;
@@ -92,17 +92,13 @@ export const UpgradeModal: React.FC<UpgradeModalProps> = ({
           </div>
 
           <div className="mt-4 space-y-2 sm:mt-6 sm:space-y-3">
-            <a
+            <button
+              type="button"
               id="cta-popup-oferta"
-              href={getTrackedUrl(CHECKOUT_URLS.OFERTA_UPSELL)}
-              onClick={(e) => {
-                trackInitiateCheckout({
-                  contentName: "Plano Premium - Oferta do Pop-up",
-                  value: 19.9,
-                });
+              onClick={() => {
+                onOpenChange(false);
 
                 if (typeof window !== "undefined") {
-                  e.preventDefault();
                   window.location.assign(
                     getTrackedUrl(CHECKOUT_URLS.OFERTA_UPSELL),
                   );
@@ -112,17 +108,13 @@ export const UpgradeModal: React.FC<UpgradeModalProps> = ({
             >
               <span>Quero comprar</span>
               <ArrowRight className="h-4 w-4 shrink-0 sm:h-5 sm:w-5" aria-hidden="true" />
-            </a>
+            </button>
 
             <button
               type="button"
               id="cta-popup-recusar"
               onClick={() => {
                 onOpenChange(false);
-                trackInitiateCheckout({
-                  contentName: "Material Essencial",
-                  value: 10,
-                });
 
                 if (typeof window !== "undefined") {
                   window.location.assign(
