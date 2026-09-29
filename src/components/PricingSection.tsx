@@ -105,7 +105,7 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onOpenUpgradeMod
                   {plan.id === "plano-essencial" ? (
                     <CTAButton
                       id={plan.ctaId}
-                      href="#upgrade-oferta"
+                      href={plan.ctaHref}
                       variant="muted"
                       trackCheckout={false}
                       onClick={(e) => {
@@ -120,8 +120,7 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onOpenUpgradeMod
                       id={plan.ctaId}
                       href={plan.ctaHref}
                       variant="primary"
-                      trackingName="Plano Premium Completo"
-                      trackingValue={27}
+                      trackCheckout={false}
                     >
                       {plan.ctaLabel}
                     </CTAButton>
