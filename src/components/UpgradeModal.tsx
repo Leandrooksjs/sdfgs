@@ -25,12 +25,11 @@ export const UpgradeModal: React.FC<UpgradeModalProps> = ({
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [open, onOpenChange]);
 
-  if (!open) return null;
-
   return (
     <div
       id="upgrade-modal-backdrop"
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-xs p-4 animate-in fade-in duration-200"
+      className={`fixed inset-0 z-50 items-center justify-center bg-black/80 backdrop-blur-xs p-4 animate-in fade-in duration-200 ${open ? "flex" : "hidden"}`}
+      aria-hidden={!open}
       onClick={() => onOpenChange(false)}
     >
       <div
@@ -95,20 +94,21 @@ export const UpgradeModal: React.FC<UpgradeModalProps> = ({
             <a
               id="cta-popup-oferta"
               href={getTrackedUrl(CHECKOUT_URLS.OFERTA_UPSELL)}
-              onClick={(e) => {
-                e.preventDefault();
-                const destinationHref = e.currentTarget.href;
-
+              onClickCapture={() => {
                 trackInitiateCheckout({
                   contentName: "Plano Premium - Oferta do Pop-up",
                   value: 19.9,
                 });
+              }}
+              onClick={(e) => {
+                e.preventDefault();
+                const destinationHref = e.currentTarget.href;
                 onOpenChange(false);
 
                 if (typeof window !== "undefined") {
                   window.setTimeout(() => {
                     window.location.assign(destinationHref);
-                  }, 180);
+                  }, 450);
                 }
               }}
               className="inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-rose-500 px-4 py-3 text-center text-sm font-extrabold tracking-tight text-white shadow-pink-cta transition-all duration-200 hover:-translate-y-0.5 hover:bg-rose-600 sm:px-6 sm:py-4 sm:text-lg cursor-pointer select-none"
@@ -120,20 +120,21 @@ export const UpgradeModal: React.FC<UpgradeModalProps> = ({
             <a
               id="cta-popup-recusar"
               href={getTrackedUrl(originalHref)}
-              onClick={(e) => {
-                e.preventDefault();
-                const destinationHref = e.currentTarget.href;
-
+              onClickCapture={() => {
                 trackInitiateCheckout({
                   contentName: "Material Essencial",
                   value: 10,
                 });
+              }}
+              onClick={(e) => {
+                e.preventDefault();
+                const destinationHref = e.currentTarget.href;
                 onOpenChange(false);
 
                 if (typeof window !== "undefined") {
                   window.setTimeout(() => {
                     window.location.assign(destinationHref);
-                  }, 180);
+                  }, 450);
                 }
               }}
               className="inline-flex w-full items-center justify-center rounded-xl px-3 py-2.5 text-xs font-bold text-slate-500 transition-colors hover:text-slate-800 sm:px-4 sm:py-3 sm:text-sm cursor-pointer"
