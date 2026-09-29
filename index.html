@@ -81,25 +81,22 @@
           document.head.appendChild(pixel);
         }
 
+        // Carrega o rastreamento da UTMify imediatamente.
+        // A regra de InitiateCheckout depende do script já estar ativo
+        // quando o usuário clica para ir ao checkout.
+        loadUtmify();
+
         if (document.readyState === "loading") {
           document.addEventListener(
             "DOMContentLoaded",
             function () {
-              runIdle(loadMetaPixel, 2500);
+              runIdle(loadMetaPixel, 1200);
             },
             { once: true },
           );
         } else {
-          runIdle(loadMetaPixel, 2500);
+          runIdle(loadMetaPixel, 1200);
         }
-
-        window.addEventListener(
-          "load",
-          function () {
-            runIdle(loadUtmify, 4000);
-          },
-          { once: true },
-        );
       })();
     </script>
   </head>
