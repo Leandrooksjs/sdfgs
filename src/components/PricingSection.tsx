@@ -120,7 +120,8 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onOpenUpgradeMod
                       id={plan.ctaId}
                       href={plan.ctaHref}
                       variant="primary"
-                      trackCheckout={false}
+                      trackingName="Plano Premium Completo"
+                      trackingValue={27}
                     >
                       {plan.ctaLabel}
                     </CTAButton>
