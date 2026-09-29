@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { X, Sparkles, Tag, Check, ArrowRight } from "lucide-react";
 import { CHECKOUT_URLS, UPSELL_ITEMS } from "../data/content";
-import { getTrackedUrl } from "../lib/tracking";
+import { getTrackedUrl, trackInitiateCheckout } from "../lib/tracking";
 
 interface UpgradeModalProps {
   open: boolean;
@@ -97,11 +97,17 @@ export const UpgradeModal: React.FC<UpgradeModalProps> = ({
               id="cta-popup-oferta"
               onClick={() => {
                 onOpenChange(false);
+                trackInitiateCheckout({
+                  contentName: "Plano Premium - Oferta do Pop-up",
+                  value: 19.9,
+                });
 
                 if (typeof window !== "undefined") {
-                  window.location.assign(
-                    getTrackedUrl(CHECKOUT_URLS.OFERTA_UPSELL),
-                  );
+                  window.setTimeout(() => {
+                    window.location.assign(
+                      getTrackedUrl(CHECKOUT_URLS.OFERTA_UPSELL),
+                    );
+                  }, 180);
                 }
               }}
               className="inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-rose-500 px-4 py-3 text-center text-sm font-extrabold tracking-tight text-white shadow-pink-cta transition-all duration-200 hover:-translate-y-0.5 hover:bg-rose-600 sm:px-6 sm:py-4 sm:text-lg cursor-pointer select-none"
@@ -115,11 +121,17 @@ export const UpgradeModal: React.FC<UpgradeModalProps> = ({
               id="cta-popup-recusar"
               onClick={() => {
                 onOpenChange(false);
+                trackInitiateCheckout({
+                  contentName: "Material Essencial",
+                  value: 10,
+                });
 
                 if (typeof window !== "undefined") {
-                  window.location.assign(
-                    getTrackedUrl(CHECKOUT_URLS.ESSENCIAL),
-                  );
+                  window.setTimeout(() => {
+                    window.location.assign(
+                      getTrackedUrl(CHECKOUT_URLS.ESSENCIAL),
+                    );
+                  }, 180);
                 }
               }}
               className="inline-flex w-full items-center justify-center rounded-xl px-3 py-2.5 text-xs font-bold text-slate-500 transition-colors hover:text-slate-800 sm:px-4 sm:py-3 sm:text-sm cursor-pointer"
