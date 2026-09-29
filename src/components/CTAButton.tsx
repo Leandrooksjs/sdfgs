@@ -32,15 +32,6 @@ export const CTAButton: React.FC<CTAButtonProps> = ({
   const shouldTrackCheckout = trackCheckout ?? isExternal;
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    if (shouldTrackCheckout && isExternal) {
-      trackInitiateCheckout({
-        contentName:
-          trackingName ||
-          (typeof children === "string" ? children : "Quero comprar"),
-        value: trackingValue,
-      });
-    }
-
     if (onClick) {
       onClick(e);
       return;
@@ -48,6 +39,21 @@ export const CTAButton: React.FC<CTAButtonProps> = ({
 
     if (isExternal && typeof window !== "undefined") {
       e.preventDefault();
+
+      if (shouldTrackCheckout) {
+        trackInitiateCheckout({
+          contentName:
+            trackingName ||
+            (typeof children === "string" ? children : "Quero comprar"),
+          value: trackingValue,
+        });
+
+        window.setTimeout(() => {
+          window.location.assign(trackedHref);
+        }, 180);
+        return;
+      }
+
       window.location.assign(trackedHref);
     }
   };
