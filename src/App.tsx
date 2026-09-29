@@ -51,15 +51,13 @@ export default function App() {
       <Footer />
       <FloatingCartButton />
 
-      {modalOpen && (
-        <Suspense fallback={null}>
-          <UpgradeModal
-            open={modalOpen}
-            onOpenChange={setModalOpen}
-            originalHref={originalCheckoutHref}
-          />
-        </Suspense>
-      )}
+      <Suspense fallback={null}>
+        <UpgradeModal
+          open={modalOpen}
+          onOpenChange={setModalOpen}
+          originalHref={originalCheckoutHref}
+        />
+      </Suspense>
 
       {showPurchaseToast && (
         <Suspense fallback={null}>
