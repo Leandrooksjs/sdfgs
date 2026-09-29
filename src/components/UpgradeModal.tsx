@@ -92,21 +92,22 @@ export const UpgradeModal: React.FC<UpgradeModalProps> = ({
           </div>
 
           <div className="mt-4 space-y-2 sm:mt-6 sm:space-y-3">
-            <button
-              type="button"
+            <a
               id="cta-popup-oferta"
-              onClick={() => {
-                onOpenChange(false);
+              href={getTrackedUrl(CHECKOUT_URLS.OFERTA_UPSELL)}
+              onClick={(e) => {
+                e.preventDefault();
+                const destinationHref = e.currentTarget.href;
+
                 trackInitiateCheckout({
                   contentName: "Plano Premium - Oferta do Pop-up",
                   value: 19.9,
                 });
+                onOpenChange(false);
 
                 if (typeof window !== "undefined") {
                   window.setTimeout(() => {
-                    window.location.assign(
-                      getTrackedUrl(CHECKOUT_URLS.OFERTA_UPSELL),
-                    );
+                    window.location.assign(destinationHref);
                   }, 180);
                 }
               }}
@@ -114,30 +115,31 @@ export const UpgradeModal: React.FC<UpgradeModalProps> = ({
             >
               <span>Quero comprar</span>
               <ArrowRight className="h-4 w-4 shrink-0 sm:h-5 sm:w-5" aria-hidden="true" />
-            </button>
+            </a>
 
-            <button
-              type="button"
+            <a
               id="cta-popup-recusar"
-              onClick={() => {
-                onOpenChange(false);
+              href={getTrackedUrl(originalHref)}
+              onClick={(e) => {
+                e.preventDefault();
+                const destinationHref = e.currentTarget.href;
+
                 trackInitiateCheckout({
                   contentName: "Material Essencial",
                   value: 10,
                 });
+                onOpenChange(false);
 
                 if (typeof window !== "undefined") {
                   window.setTimeout(() => {
-                    window.location.assign(
-                      getTrackedUrl(CHECKOUT_URLS.ESSENCIAL),
-                    );
+                    window.location.assign(destinationHref);
                   }, 180);
                 }
               }}
               className="inline-flex w-full items-center justify-center rounded-xl px-3 py-2.5 text-xs font-bold text-slate-500 transition-colors hover:text-slate-800 sm:px-4 sm:py-3 sm:text-sm cursor-pointer"
             >
               Não, quero continuar com minha escolha original
-            </button>
+            </a>
           </div>
 
           <p className="mt-4 text-[10px] font-semibold text-slate-400 sm:mt-5 sm:text-xs">
