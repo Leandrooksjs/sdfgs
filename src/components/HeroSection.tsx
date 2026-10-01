@@ -10,7 +10,7 @@ export const HeroSection: React.FC = () => {
     >
       <div className="mx-auto max-w-4xl text-center">
         <h1 className="text-[1.7rem] leading-[1.12] font-black tracking-tight text-slate-900 sm:text-5xl sm:leading-tight lg:text-6xl">
-          <span className="text-rose-500">+300</span> Mapas Mentais de Ciência da Computação
+          <span className="text-blue-600">+300</span> Mapas Mentais de Ciência da Computação
         </h1>
 
         <a
