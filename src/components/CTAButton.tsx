@@ -69,7 +69,7 @@ export const CTAButton: React.FC<CTAButtonProps> = ({
   const variantClasses =
     variant === "primary"
       ? "bg-blue-600 text-white shadow-pink-cta hover:-translate-y-0.5 hover:bg-blue-700 active:translate-y-0"
-      : "border-2 border-blue-200 bg-blue-50 text-rose-700 hover:bg-blue-100 hover:border-blue-300";
+      : "border-2 border-blue-200 bg-blue-50 text-blue-700 hover:bg-blue-100 hover:border-blue-300";
 
   return (
     <a
