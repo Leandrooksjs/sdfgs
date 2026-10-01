@@ -17,7 +17,7 @@ export const FAQSection: React.FC = () => {
     >
       <div className="mx-auto max-w-3xl">
         <h2 className="text-center text-2xl font-black tracking-tight text-slate-900 sm:text-4xl">
-          PERGUNTAS <span className="text-rose-500">FREQUENTES</span>
+          PERGUNTAS <span className="text-blue-600">FREQUENTES</span>
         </h2>
         <p className="mt-2 text-center text-sm font-semibold text-slate-600">
           Tire suas dúvidas sobre o material e como começar a aplicar.
@@ -29,7 +29,7 @@ export const FAQSection: React.FC = () => {
             return (
               <div
                 key={item.question}
-                className="shadow-soft rounded-2xl border border-slate-200 bg-slate-50/60 px-4 sm:px-6 transition-all duration-200 hover:border-rose-300"
+                className="shadow-soft rounded-2xl border border-slate-200 bg-slate-50/60 px-4 sm:px-6 transition-all duration-200 hover:border-blue-300"
               >
                 <button
                   type="button"
@@ -39,7 +39,7 @@ export const FAQSection: React.FC = () => {
                 >
                   <span className="min-w-0">{item.question}</span>
                   <ChevronDown
-                    className={`h-5 w-5 shrink-0 text-rose-500 transition-transform duration-200 ${
+                    className={`h-5 w-5 shrink-0 text-blue-600 transition-transform duration-200 ${
                       isOpen ? "rotate-180" : ""
                     }`}
                   />
