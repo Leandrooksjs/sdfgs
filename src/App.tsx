@@ -40,7 +40,7 @@ export default function App() {
   };
 
   return (
-    <main className="relative min-h-screen bg-[#fff7f8] font-sans text-slate-800 antialiased selection:bg-rose-100 selection:text-rose-900">
+    <main className="relative min-h-screen bg-[#f7faff] font-sans text-slate-800 antialiased selection:bg-blue-100 selection:text-rose-900">
       <TopUrgencyBanner />
       <HeroSection />
       <WhatYouWillReceive />
