@@ -16,7 +16,7 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onOpenUpgradeMod
     >
       <div className="mx-auto max-w-6xl">
         <h2 className="text-center text-2xl font-black tracking-tight text-slate-900 sm:text-4xl">
-          ESCOLHA A MELHOR <span className="text-rose-500">OPÇÃO PARA VOCÊ</span>
+          ESCOLHA A MELHOR <span className="text-blue-600">OPÇÃO PARA VOCÊ</span>
         </h2>
         <p className="mt-2 text-center text-sm font-semibold text-slate-600">
           Acesso imediato no seu e-mail logo após a confirmação do pagamento.
@@ -28,12 +28,12 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onOpenUpgradeMod
               key={plan.id}
               className={`relative flex h-full flex-col rounded-3xl bg-white p-6 sm:p-8 transition-all duration-300 ${
                 plan.featured
-                  ? "shadow-pink-cta border-2 border-rose-500 scale-[1.01]"
+                  ? "shadow-pink-cta border-2 border-blue-600 scale-[1.01]"
                   : "shadow-soft border border-slate-200"
               }`}
             >
               {plan.badge && (
-                <span className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-rose-500 px-4 py-1.5 text-xs font-black tracking-wide whitespace-nowrap text-white uppercase shadow-md shadow-rose-200">
+                <span className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-blue-600 px-4 py-1.5 text-xs font-black tracking-wide whitespace-nowrap text-white uppercase shadow-md shadow-blue-200">
                   <Star className="mr-1 inline h-3.5 w-3.5 fill-current" aria-hidden="true" />
                   {plan.badge}
                 </span>
@@ -45,7 +45,7 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onOpenUpgradeMod
               {plan.subtitle && (
                 <p
                   className={`mt-1 text-xs font-black tracking-wide uppercase sm:text-sm ${
-                    plan.featured ? "text-rose-500" : "text-slate-500"
+                    plan.featured ? "text-blue-600" : "text-slate-500"
                   }`}
                 >
                   {plan.subtitle}
@@ -72,10 +72,10 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onOpenUpgradeMod
                     key={item.label}
                     className="flex items-center gap-3 text-sm font-bold text-slate-800 sm:text-base"
                   >
-                    <Check className="h-5 w-5 shrink-0 text-rose-500" aria-hidden="true" />
+                    <Check className="h-5 w-5 shrink-0 text-blue-600" aria-hidden="true" />
                     <span className="min-w-0">{item.label}</span>
                     {item.bonus && (
-                      <span className="ml-auto inline-flex items-center gap-1 rounded-md bg-rose-100 border border-rose-200/60 px-2 py-0.5 text-[11px] font-black text-rose-600 uppercase tracking-wide shrink-0">
+                      <span className="ml-auto inline-flex items-center gap-1 rounded-md bg-blue-100 border border-blue-200/60 px-2 py-0.5 text-[11px] font-black text-blue-700 uppercase tracking-wide shrink-0">
                         🎁 Bônus
                       </span>
                     )}
