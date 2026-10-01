@@ -48,19 +48,19 @@ export const UpgradeModal: React.FC<UpgradeModalProps> = ({
           <X className="h-4 w-4" />
         </button>
 
-        <div className="bg-rose-500 px-4 py-2 text-[10px] font-extrabold tracking-wide text-white uppercase sm:px-6 sm:text-xs">
+        <div className="bg-blue-600 px-4 py-2 text-[10px] font-extrabold tracking-wide text-white uppercase sm:px-6 sm:text-xs">
           <Sparkles className="mr-1.5 inline h-3 w-3 sm:h-3.5 sm:w-3.5" aria-hidden="true" />
           Oferta especial disponível agora
         </div>
 
         <div className="p-4 sm:p-8">
           <div className="space-y-2 text-center sm:space-y-3">
-            <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-full bg-rose-100 sm:h-12 sm:w-12">
-              <Tag className="h-5 w-5 text-rose-600 sm:h-6 sm:w-6" aria-hidden="true" />
+            <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-full bg-blue-100 sm:h-12 sm:w-12">
+              <Tag className="h-5 w-5 text-blue-700 sm:h-6 sm:w-6" aria-hidden="true" />
             </div>
 
             <h3 className="text-xl font-black tracking-tight text-slate-900 sm:text-3xl leading-snug">
-              Economize <span className="text-rose-600">R$ 7,10</span>
+              Economize <span className="text-blue-700">R$ 7,10</span>
             </h3>
 
             <p className="text-sm font-black text-slate-700 sm:text-base">
@@ -111,7 +111,7 @@ export const UpgradeModal: React.FC<UpgradeModalProps> = ({
                   }, 450);
                 }
               }}
-              className="inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-rose-500 px-4 py-3 text-center text-sm font-extrabold tracking-tight text-white shadow-pink-cta transition-all duration-200 hover:-translate-y-0.5 hover:bg-rose-600 sm:px-6 sm:py-4 sm:text-lg cursor-pointer select-none"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-blue-600 px-4 py-3 text-center text-sm font-extrabold tracking-tight text-white shadow-pink-cta transition-all duration-200 hover:-translate-y-0.5 hover:bg-blue-700 sm:px-6 sm:py-4 sm:text-lg cursor-pointer select-none"
             >
               <span>Quero comprar</span>
               <ArrowRight className="h-4 w-4 shrink-0 sm:h-5 sm:w-5" aria-hidden="true" />
