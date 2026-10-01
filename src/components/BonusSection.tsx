@@ -15,7 +15,7 @@ export const BonusSection: React.FC = () => {
             BÔNUS EXCLUSIVOS
           </h2>
           <div className="mt-3 flex items-center justify-center text-sm font-black sm:text-base">
-            <span className="tracking-wide text-rose-500">
+            <span className="tracking-wide text-blue-600">
               Exclusivo do plano premium
             </span>
           </div>
@@ -26,7 +26,7 @@ export const BonusSection: React.FC = () => {
             {EXCLUSIVE_BONUSES.map((bonus) => (
               <div
                 key={bonus.id}
-                className="w-[220px] shrink-0 overflow-hidden rounded-3xl border border-slate-200 bg-white p-3 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:border-rose-300 hover:shadow-md sm:w-[240px]"
+                className="w-[220px] shrink-0 overflow-hidden rounded-3xl border border-slate-200 bg-white p-3 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:border-blue-300 hover:shadow-md sm:w-[240px]"
               >
                 <div className="aspect-square w-full overflow-hidden rounded-2xl bg-white">
                   <DeferredImage
