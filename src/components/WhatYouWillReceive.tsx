@@ -179,9 +179,9 @@ export const WhatYouWillReceive: React.FC = () => {
               }}
               className="relative h-5 w-full cursor-ew-resize touch-pan-y select-none outline-none"
             >
-              <div className="absolute top-1/2 h-2 w-full -translate-y-1/2 rounded-full bg-rose-100" />
+              <div className="absolute top-1/2 h-2 w-full -translate-y-1/2 rounded-full bg-blue-100" />
               <div
-                className="absolute top-1/2 h-5 w-14 -translate-y-1/2 rounded-full bg-rose-500 shadow-sm"
+                className="absolute top-1/2 h-5 w-14 -translate-y-1/2 rounded-full bg-blue-600 shadow-sm"
                 style={{
                   left: `calc((100% - 56px) * ${scrollProgress / 100})`,
                 }}
