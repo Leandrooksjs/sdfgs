@@ -2,22 +2,22 @@ import React from "react";
 
 export const Footer: React.FC = () => {
   return (
-    <footer id="rodape" className="perf-section bg-transparent px-4 py-12 text-slate-600 border-t border-rose-100/60">
+    <footer id="rodape" className="perf-section bg-transparent px-4 py-12 text-slate-600 border-t border-blue-100/60">
       <div className="mx-auto max-w-5xl text-center">
         <nav
           aria-label="Links institucionais"
           className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm font-bold text-slate-700"
         >
-          <a href="#" className="transition-colors hover:text-rose-600">
+          <a href="#" className="transition-colors hover:text-blue-700">
             Termos de Uso
           </a>
-          <a href="#" className="transition-colors hover:text-rose-600">
+          <a href="#" className="transition-colors hover:text-blue-700">
             Política de Privacidade
           </a>
-          <a href="#" className="transition-colors hover:text-rose-600">
+          <a href="#" className="transition-colors hover:text-blue-700">
             Contato & Suporte
           </a>
-          <a href="#" className="transition-colors hover:text-rose-600">
+          <a href="#" className="transition-colors hover:text-blue-700">
             Aviso de Direitos Autorais
           </a>
         </nav>
