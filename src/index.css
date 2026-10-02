@@ -292,3 +292,15 @@ body {
   display: block;
   background: transparent;
 }
+
+
+/* Integra o fundo branco do mockup ao fundo escuro sem criar um bloco visível. */
+.premium-mockup-showcase {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: 0 !important;
+}
+
+.premium-mockup-image {
+  mix-blend-mode: multiply;
+}
