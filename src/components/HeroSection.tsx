@@ -10,7 +10,7 @@ export const HeroSection: React.FC = () => {
     >
       <div className="mx-auto max-w-4xl text-center">
         <h1 className="text-[2.25rem] leading-[1.02] font-black tracking-[-0.035em] text-white sm:text-6xl sm:leading-[1.02] lg:text-7xl">
-          +300 Mapas Mentais de
+          +200 Mapas Mentais de
           <br />
           <span className="hero-accent">Ciência da Computação.</span>
         </h1>
@@ -43,7 +43,7 @@ export const HeroSection: React.FC = () => {
 
         <div className="mx-auto mt-7 max-w-xl sm:mt-10">
           <CTAButton id="cta-hero" href="#ofertas" className="animate-subtle-pulse">
-            QUERO ACESSAR OS +300 MAPAS AGORA
+            QUERO ACESSAR OS +200 MAPAS AGORA
           </CTAButton>
         </div>
 
