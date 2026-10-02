@@ -56,7 +56,7 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onOpenUpgradeMod
                 <div className="mt-5 flex justify-center">
                   <div className="w-full max-w-[18rem] overflow-hidden rounded-2xl bg-white">
                     <img
-                      src={optimizedImage(plan.mockupImage, 640, 70)}
+                      src={plan.mockupImage}
                       alt={plan.mockupAlt || "Mockup do produto"}
                       width={640}
                       height={640}
