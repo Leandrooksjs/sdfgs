@@ -53,26 +53,13 @@ export const EXCLUSIVE_BONUSES = [
   },
   {
     id: 5,
-    title: "Plano de Revisão de 30 Dias",
-    imageSrc: "/images/mockup-mapas-mentais.jpg",
-    alt: "Plano de revisão de 30 dias",
-    description: "Rotina prática para distribuir os principais assuntos ao longo de 30 dias.",
-  },
-  {
-    id: 6,
     title: "Caderno Visual de Pegadinhas",
     imageSrc: "/images/mockup-mapas-mentais.jpg",
     alt: "Caderno visual de pegadinhas de Ciência da Computação",
     description: "Diferenças, exceções e detalhes que merecem atenção na revisão.",
   },
-  {
-    id: 7,
-    title: "Guia de Revisão Expressa",
-    imageSrc: "/images/mockup-mapas-mentais.jpg",
-    alt: "Guia visual de revisão expressa",
-    description: "Seleção de pontos essenciais para consultar quando o tempo de revisão é curto.",
-  },
 ];
+
 
 export interface PricingPlanItem {
   label: string;
