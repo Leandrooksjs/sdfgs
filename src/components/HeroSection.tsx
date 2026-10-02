@@ -42,16 +42,10 @@ export const HeroSection: React.FC = () => {
           Uma biblioteca visual para estudar, revisar e organizar os principais conceitos da Ciência da Computação.
         </p>
 
-        <div className="mx-auto mt-7 flex max-w-xl flex-col gap-3 sm:mt-10 sm:flex-row sm:justify-center">
-          <CTAButton id="cta-hero" href="#ofertas" className="animate-subtle-pulse sm:max-w-sm">
+        <div className="mx-auto mt-7 max-w-xl sm:mt-10">
+          <CTAButton id="cta-hero" href="#ofertas" className="animate-subtle-pulse">
             QUERO ACESSAR OS +300 MAPAS AGORA
           </CTAButton>
-          <a
-            href="#ofertas"
-            className="inline-flex w-full items-center justify-center rounded-2xl border border-white/10 bg-white/[0.035] px-6 py-4 text-center font-extrabold tracking-wide text-slate-200 transition-all duration-200 hover:border-white/20 hover:bg-white/[0.06] sm:max-w-xs sm:text-lg"
-          >
-            VER OFERTAS
-          </a>
         </div>
 
         <p className="mt-4 text-xs font-medium text-slate-500 sm:text-sm">
