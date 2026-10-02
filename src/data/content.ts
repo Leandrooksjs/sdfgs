@@ -26,39 +26,39 @@ export const EXCLUSIVE_BONUSES = [
   {
     id: 1,
     title: "Mapa Visual de Big-O",
-    imageSrc: "/images/mockup-mapas-mentais.jpg",
+    imageSrc: "/images/ChatGPT Image 2 de out. de 2026, 11_10_29.png",
     alt: "Mapa visual de complexidade de algoritmos",
     description: "Referência visual para consultar complexidade de algoritmos e comparar desempenho.",
   },
   {
     id: 2,
     title: "Guia Visual de Siglas de TI",
-    imageSrc: "/images/mockup-mapas-mentais.jpg",
+    imageSrc: "/images/ChatGPT Image 2 de out. de 2026, 11_10_44.png",
     alt: "Guia visual de siglas de tecnologia",
     description: "Siglas, termos e conceitos organizados para revisão rápida.",
   },
   {
     id: 3,
     title: "Mapa de Comparativos",
-    imageSrc: "/images/mockup-mapas-mentais.jpg",
+    imageSrc: "/images/ChatGPT Image 2 de out. de 2026, 11_14_26.png",
     alt: "Mapas comparativos de conceitos de computação",
     description: "Comparações entre conceitos que costumam ser confundidos durante o estudo.",
   },
   {
     id: 4,
     title: "Checklist de Revisão",
-    imageSrc: "/images/mockup-mapas-mentais.jpg",
+    imageSrc: "/images/ChatGPT Image 2 de out. de 2026, 11_17_31.png",
     alt: "Checklist visual de revisão de Ciência da Computação",
     description: "Lista organizada para acompanhar assuntos estudados e revisados.",
   },
   {
     id: 5,
     title: "Caderno Visual de Pegadinhas",
-    imageSrc: "/images/mockup-mapas-mentais.jpg",
+    imageSrc: "/images/ChatGPT Image 2 de out. de 2026, 11_18_51.png",
     alt: "Caderno visual de pegadinhas de Ciência da Computação",
     description: "Diferenças, exceções e detalhes que merecem atenção na revisão.",
   },
-];
+]
 
 
 export interface PricingPlanItem {
