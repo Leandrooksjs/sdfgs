@@ -29,7 +29,7 @@ export const FAQSection: React.FC = () => {
             return (
               <div
                 key={item.question}
-                className="shadow-soft rounded-2xl border border-slate-200 bg-slate-50/60 px-4 sm:px-6 transition-all duration-200 hover:border-blue-300"
+                className="faq-card rounded-2xl border border-white/10 bg-white/[0.035] px-4 sm:px-6 transition-all duration-200 hover:border-blue-500/50 hover:bg-white/[0.05]"
               >
                 <button
                   type="button"
@@ -46,7 +46,7 @@ export const FAQSection: React.FC = () => {
                 </button>
 
                 {isOpen && (
-                  <div className="pb-5 pt-1 text-sm leading-relaxed text-slate-300 sm:text-base font-medium border-t border-slate-200/60">
+                  <div className="pb-5 pt-1 text-sm leading-relaxed text-slate-300 sm:text-base font-medium border-t border-white/10">
                     {item.answer}
                   </div>
                 )}
