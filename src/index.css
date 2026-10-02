@@ -108,12 +108,12 @@ body {
 
 .hero-accent {
   display: inline-block;
-  color: #19d8c4;
+  color: #3b82f6;
   font-style: italic;
   text-shadow:
-    0 0 8px rgba(25, 216, 196, 0.72),
-    0 0 22px rgba(25, 216, 196, 0.40),
-    0 0 42px rgba(25, 216, 196, 0.18);
+    0 0 8px rgba(59, 130, 246, 0.78),
+    0 0 22px rgba(59, 130, 246, 0.42),
+    0 0 42px rgba(59, 130, 246, 0.20);
 }
 
 .hero-glow {
@@ -125,10 +125,10 @@ body {
 /* Converte o destaque azul anterior para o ciano do novo visual. */
 .text-blue-600,
 .text-blue-700 {
-  color: #19d8c4 !important;
+  color: #3b82f6 !important;
   text-shadow:
-    0 0 7px rgba(25, 216, 196, 0.62),
-    0 0 18px rgba(25, 216, 196, 0.30);
+    0 0 7px rgba(59, 130, 246, 0.62),
+    0 0 18px rgba(59, 130, 246, 0.30);
 }
 
 .bg-blue-600 {
