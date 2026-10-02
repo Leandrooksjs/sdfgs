@@ -26,7 +26,7 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onOpenUpgradeMod
           {PRICING_PLANS.map((plan) => (
             <div
               key={plan.id}
-              className={`relative flex h-full flex-col rounded-3xl bg-white p-6 sm:p-8 transition-all duration-300 ${
+              className={`pricing-card relative flex h-full flex-col rounded-3xl p-6 sm:p-8 transition-all duration-300 ${
                 plan.featured
                   ? "shadow-pink-cta border-2 border-blue-600 scale-[1.01]"
                   : "shadow-soft border border-slate-200"
