@@ -44,7 +44,7 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onOpenUpgradeMod
               </h3>
               {plan.subtitle && (
                 <p
-                  className={`mt-1 text-xs font-black tracking-wide uppercase sm:text-sm ${
+                  className={`pricing-subtitle mt-1 text-xs font-black tracking-wide uppercase sm:text-sm ${
                     plan.featured ? "text-blue-600" : "text-slate-300"
                   }`}
                 >
