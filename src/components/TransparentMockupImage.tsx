@@ -40,7 +40,13 @@ export const TransparentMockupImage: React.FC<TransparentMockupImageProps> = ({
 
       ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
 
-      const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+      let imageData: ImageData;
+      try {
+        imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+      } catch {
+        if (!cancelled) setProcessedSrc(src);
+        return;
+      }
       const pixels = imageData.data;
       const total = canvas.width * canvas.height;
       const candidate = new Uint8Array(total);
