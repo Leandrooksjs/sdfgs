@@ -132,14 +132,14 @@ body {
 }
 
 .bg-blue-600 {
-  background: linear-gradient(135deg, #13cdb9 0%, #19d8c4 55%, #0fb4a3 100%) !important;
+  background: linear-gradient(135deg, #2563eb 0%, #3b82f6 55%, #1d4ed8 100%) !important;
   box-shadow:
-    0 0 14px rgba(25, 216, 196, 0.34),
-    0 10px 34px rgba(25, 216, 196, 0.20) !important;
+    0 0 14px rgba(59, 130, 246, 0.38),
+    0 10px 34px rgba(59, 130, 246, 0.20) !important;
 }
 
 .bg-blue-700 {
-  background: #0e8f83 !important;
+  background: #1d4ed8 !important;
 }
 
 .bg-blue-100 {
@@ -265,4 +265,19 @@ body {
 
 .bonus-card p:last-of-type {
   color: #475569 !important;
+}
+
+
+.faq-card,
+.faq-card button,
+.faq-card div {
+  text-shadow: none !important;
+}
+
+.faq-card button {
+  color: #f8fafc !important;
+}
+
+.faq-card div {
+  color: #cbd5e1 !important;
 }
