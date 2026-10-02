@@ -2,11 +2,11 @@ import React from "react";
 
 export const Footer: React.FC = () => {
   return (
-    <footer id="rodape" className="perf-section bg-transparent px-4 py-12 text-slate-600 border-t border-blue-100/60">
+    <footer id="rodape" className="perf-section bg-black px-4 py-12 text-slate-300 border-t border-blue-100/60">
       <div className="mx-auto max-w-5xl text-center">
         <nav
           aria-label="Links institucionais"
-          className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm font-bold text-slate-700"
+          className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm font-bold text-slate-200"
         >
           <a href="#" className="transition-colors hover:text-blue-700">
             Termos de Uso
@@ -22,11 +22,11 @@ export const Footer: React.FC = () => {
           </a>
         </nav>
 
-        <p className="mt-6 text-xs text-slate-500 sm:text-sm font-semibold">
+        <p className="mt-6 text-xs text-slate-300 sm:text-sm font-semibold">
           © 2026 +300 Mapas Mentais de Ciência da Computação. Todos os direitos reservados.
         </p>
 
-        <p className="mx-auto mt-4 max-w-3xl text-xs leading-relaxed text-slate-400">
+        <p className="mx-auto mt-4 max-w-3xl text-xs leading-relaxed text-slate-300">
           Este é um material digital de apoio aos estudos, organizado de forma visual para consulta e revisão de conceitos de Ciência da Computação. O conteúdo é complementar e não substitui livros, aulas, cursos ou materiais acadêmicos especializados.
         </p>
       </div>
