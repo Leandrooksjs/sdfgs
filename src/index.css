@@ -281,3 +281,9 @@ body {
 .faq-card div {
   color: #cbd5e1 !important;
 }
+
+
+/* Subtítulos dos planos sem aura/glow */
+.pricing-subtitle {
+  text-shadow: none !important;
+}
