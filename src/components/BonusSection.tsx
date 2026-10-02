@@ -7,6 +7,7 @@ export const BonusSection: React.FC = () => {
   return (
     <section
       id="bonus-exclusivos"
+      data-offer-version="cs-v3"
       className="perf-section bg-black px-4 py-12 text-slate-100 sm:py-16"
     >
       <div className="mx-auto max-w-7xl">
