@@ -202,3 +202,5 @@ export const RECENT_BUYERS: BuyerNotification[] = [
   { nome: "Profissional de TI", cidade: "Recife, PE" },
   { nome: "Estudante de Tecnologia", cidade: "Porto Alegre, RS" },
 ];
+
+// Conteúdo sincronizado com a oferta atual.
