@@ -12,13 +12,13 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onOpenUpgradeMod
   return (
     <section
       id="ofertas"
-      className="perf-section bg-transparent px-4 py-14 sm:py-20 text-slate-800"
+      className="perf-section bg-black px-4 py-14 sm:py-20 text-slate-100"
     >
       <div className="mx-auto max-w-6xl">
-        <h2 className="text-center text-2xl font-black tracking-tight text-slate-900 sm:text-4xl">
+        <h2 className="text-center text-2xl font-black tracking-tight text-white sm:text-4xl">
           ESCOLHA A MELHOR <span className="text-blue-600">OPÇÃO PARA VOCÊ</span>
         </h2>
-        <p className="mt-2 text-center text-sm font-semibold text-slate-600">
+        <p className="mt-2 text-center text-sm font-semibold text-slate-300">
           Acesso imediato no seu e-mail logo após a confirmação do pagamento.
         </p>
 
@@ -39,13 +39,13 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onOpenUpgradeMod
                 </span>
               )}
 
-              <h3 className="mt-2 text-2xl font-black tracking-tight text-slate-900 sm:text-3xl">
+              <h3 className="mt-2 text-2xl font-black tracking-tight text-white sm:text-3xl">
                 {plan.title}
               </h3>
               {plan.subtitle && (
                 <p
                   className={`mt-1 text-xs font-black tracking-wide uppercase sm:text-sm ${
-                    plan.featured ? "text-blue-600" : "text-slate-500"
+                    plan.featured ? "text-blue-600" : "text-slate-300"
                   }`}
                 >
                   {plan.subtitle}
@@ -70,7 +70,7 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onOpenUpgradeMod
                 {plan.items.map((item) => (
                   <li
                     key={item.label}
-                    className="flex items-center gap-3 text-sm font-bold text-slate-800 sm:text-base"
+                    className="flex items-center gap-3 text-sm font-bold text-slate-100 sm:text-base"
                   >
                     <Check className="h-5 w-5 shrink-0 text-blue-600" aria-hidden="true" />
                     <span className="min-w-0">{item.label}</span>
@@ -85,7 +85,7 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onOpenUpgradeMod
                 {plan.excluded?.map((exItem) => (
                   <li
                     key={exItem}
-                    className="flex items-center gap-3 text-sm font-medium text-slate-400 line-through sm:text-base"
+                    className="flex items-center gap-3 text-sm font-medium text-slate-300 line-through sm:text-base"
                   >
                     <X className="h-5 w-5 shrink-0 text-slate-300" aria-hidden="true" />
                     <span className="min-w-0">{exItem}</span>
@@ -94,10 +94,10 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onOpenUpgradeMod
               </ul>
 
               <div className="mt-8 border-t border-slate-100 pt-6 text-center">
-                <p className="text-3xl font-black tracking-tight text-slate-900 sm:text-5xl">
+                <p className="text-3xl font-black tracking-tight text-white sm:text-5xl">
                   {plan.price}
                 </p>
-                <p className="mt-1 text-xs font-semibold text-slate-500 sm:text-sm">
+                <p className="mt-1 text-xs font-semibold text-slate-300 sm:text-sm">
                   {plan.priceNote}
                 </p>
 
@@ -129,7 +129,7 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onOpenUpgradeMod
                 </div>
 
                 {plan.footnote && (
-                  <p className="mt-3 text-center text-xs font-semibold text-slate-500">
+                  <p className="mt-3 text-center text-xs font-semibold text-slate-300">
                     {plan.footnote}
                   </p>
                 )}
