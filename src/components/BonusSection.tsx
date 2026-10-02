@@ -7,11 +7,11 @@ export const BonusSection: React.FC = () => {
   return (
     <section
       id="bonus-exclusivos"
-      className="perf-section bg-transparent px-4 py-12 text-slate-800 sm:py-16"
+      className="perf-section bg-black px-4 py-12 text-slate-100 sm:py-16"
     >
       <div className="mx-auto max-w-7xl">
         <div className="text-center">
-          <h2 className="text-2xl font-black uppercase tracking-tight text-slate-900 sm:text-4xl">
+          <h2 className="text-2xl font-black uppercase tracking-tight text-white sm:text-4xl">
             BÔNUS EXCLUSIVOS
           </h2>
           <div className="mt-3 flex items-center justify-center text-sm font-black sm:text-base">
@@ -39,10 +39,10 @@ export const BonusSection: React.FC = () => {
                   />
                 </div>
 
-                <p className="mt-3 px-1 text-center text-sm font-extrabold leading-snug text-slate-800 sm:text-base">
+                <p className="mt-3 px-1 text-center text-sm font-extrabold leading-snug text-slate-100 sm:text-base">
                   {bonus.title}
                 </p>
-                <p className="mt-1.5 px-1 pb-1 text-center text-[11px] font-medium leading-relaxed text-slate-500 sm:text-xs">
+                <p className="mt-1.5 px-1 pb-1 text-center text-[11px] font-medium leading-relaxed text-slate-300 sm:text-xs">
                   {bonus.description}
                 </p>
               </div>
