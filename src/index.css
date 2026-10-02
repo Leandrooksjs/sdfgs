@@ -109,7 +109,7 @@ body {
 .hero-accent {
   display: inline-block;
   color: #3b82f6;
-  font-style: italic;
+  font-style: normal;
   text-shadow:
     0 0 8px rgba(59, 130, 246, 0.78),
     0 0 22px rgba(59, 130, 246, 0.42),
@@ -237,4 +237,16 @@ body {
 
 .pricing-card .shadow-md {
   box-shadow: 0 10px 32px rgba(0, 0, 0, 0.32);
+}
+
+
+/* Texto da garantia sem efeito borrado */
+#garantia h2,
+#garantia p {
+  text-shadow: none !important;
+}
+
+#garantia .text-blue-600,
+#garantia .text-blue-700 {
+  text-shadow: none !important;
 }
