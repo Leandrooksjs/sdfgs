@@ -20,7 +20,7 @@ export const FAQSection: React.FC = () => {
           PERGUNTAS <span className="text-blue-600">FREQUENTES</span>
         </h2>
         <p className="mt-2 text-center text-sm font-semibold text-slate-600">
-          Tire suas dúvidas sobre o material e como começar a aplicar.
+          Tire suas dúvidas sobre os mapas e como usar o material nos seus estudos.
         </p>
 
         <div className="mt-10 space-y-3">
@@ -57,7 +57,7 @@ export const FAQSection: React.FC = () => {
 
         <div className="mx-auto mt-10 max-w-xl">
           <CTAButton id="cta-faq-bottom" href="#ofertas">
-            QUERO OS MAPAS MENTAIS SOCIOEMOCIONAIS
+            QUERO OS +300 MAPAS DE CIÊNCIA DA COMPUTAÇÃO
           </CTAButton>
         </div>
       </div>
