@@ -289,14 +289,14 @@ body {
 }
 
 
-/* Área do mockup premium integrada ao fundo branco do próprio mockup */
+/* Área do mockup premium integrada ao fundo escuro do card */
 .premium-mockup-showcase {
-  background: #ffffff;
+  background: transparent;
   box-shadow: none !important;
   border: 0 !important;
 }
 
 .premium-mockup-showcase img {
   display: block;
-  background: #ffffff;
+  background: transparent;
 }
