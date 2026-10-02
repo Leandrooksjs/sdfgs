@@ -103,11 +103,11 @@ export const WhatYouWillReceive: React.FC = () => {
   return (
     <section
       id="o-que-vai-receber"
-      className="perf-section bg-transparent px-4 py-12 text-slate-800 sm:py-16"
+      className="perf-section bg-black px-4 py-12 text-slate-100 sm:py-16"
     >
       <div className="mx-auto max-w-6xl">
         <div className="mb-8 text-center sm:mb-12">
-          <h2 className="text-2xl font-black tracking-tight text-slate-900 sm:text-4xl">
+          <h2 className="text-2xl font-black tracking-tight text-white sm:text-4xl">
             VEJA NA PRÁTICA UM POUCO DO QUE VOCÊ VAI RECEBER
           </h2>
         </div>
