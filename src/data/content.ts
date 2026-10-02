@@ -108,7 +108,7 @@ export const PRICING_PLANS: PricingPlan[] = [
     featured: true,
     badge: "Mais Escolhido",
     title: "Plano Completo",
-    mockupImage: "/images/mockup-ciencia-computacao.svg",
+    mockupImage: "/images/ChatGPT Image 2 de out. de 2026, 10_45_59.png",
     mockupAlt: "Mockup do Plano Completo +300 Mapas Mentais de Ciência da Computação",
     items: [
       { label: "+300 Mapas Mentais de Ciência da Computação" },
