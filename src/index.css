@@ -162,11 +162,8 @@ body {
   border-color: rgba(25, 216, 196, 0.28) !important;
 }
 
-.selection:bg-blue-100::selection {
+::selection {
   background: rgba(25, 216, 196, 0.20) !important;
-}
-
-.selection:text-blue-900::selection {
   color: #eafffb !important;
 }
 
