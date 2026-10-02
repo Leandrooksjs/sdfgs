@@ -23,7 +23,7 @@ export const HeroSection: React.FC = () => {
               src={optimizedImage("/images/ChatGPT Image Sep 25, 2026, 08_56_45 PM.png", 640, 70)}
               srcSet={`${optimizedImage("/images/ChatGPT Image Sep 25, 2026, 08_56_45 PM.png", 480, 70)} 480w, ${optimizedImage("/images/ChatGPT Image Sep 25, 2026, 08_56_45 PM.png", 640, 70)} 640w`}
               sizes="(max-width: 640px) 344px, 640px"
-              alt="Mockup +120 Mapas Mentais Socioemocionais Infantil"
+              alt="Mockup +300 Mapas Mentais de Ciência da Computação"
               referrerPolicy="no-referrer"
               width={640}
               height={640}
@@ -36,12 +36,12 @@ export const HeroSection: React.FC = () => {
         </a>
 
         <p className="mx-auto mt-6 max-w-2xl text-base leading-snug font-bold text-slate-700 sm:mt-8 sm:text-xl sm:leading-relaxed">
-          A forma visual e prática de desenvolver o lado emocional das crianças com diálogo de verdade.
+          Uma biblioteca visual para estudar, revisar e organizar os principais conceitos da Ciência da Computação.
         </p>
 
         <div className="mx-auto mt-6 max-w-xl sm:mt-10">
           <CTAButton id="cta-hero" href="#ofertas" className="animate-subtle-pulse">
-            QUERO ACESSAR OS MAPAS MENTAIS AGORA
+            QUERO ACESSAR OS +300 MAPAS AGORA
           </CTAButton>
           <p className="mt-3 text-xs font-semibold text-slate-500 sm:text-sm">
             Clique no botão e receba acesso imediato ao material completo.
