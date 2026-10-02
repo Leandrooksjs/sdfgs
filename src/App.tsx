@@ -7,6 +7,7 @@ import { PricingSection } from "./components/PricingSection";
 import { GuaranteeSection } from "./components/GuaranteeSection";
 import { FAQSection } from "./components/FAQSection";
 import { Footer } from "./components/Footer";
+import { TestimonialsSection } from "./components/TestimonialsSection";
 
 const UpgradeModal = lazy(() =>
   import("./components/UpgradeModal").then((module) => ({
@@ -44,6 +45,7 @@ export default function App() {
       <BonusSection />
       <PricingSection onOpenUpgradeModal={handleOpenUpgradeModal} />
       <GuaranteeSection />
+      <TestimonialsSection />
       <FAQSection />
       <Footer />
 
