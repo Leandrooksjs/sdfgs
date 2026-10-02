@@ -287,3 +287,16 @@ body {
 .pricing-subtitle {
   text-shadow: none !important;
 }
+
+
+/* Área do mockup premium integrada ao fundo branco do próprio mockup */
+.premium-mockup-showcase {
+  background: #ffffff;
+  box-shadow: none !important;
+  border: 0 !important;
+}
+
+.premium-mockup-showcase img {
+  display: block;
+  background: #ffffff;
+}
