@@ -250,3 +250,19 @@ body {
 #garantia .text-blue-700 {
   text-shadow: none !important;
 }
+
+
+/* Textos dos cards de bônus precisam ficar cristalinos. */
+.bonus-card p {
+  text-shadow: none !important;
+  filter: none !important;
+}
+
+.bonus-card p:first-of-type {
+  color: #0f172a !important;
+  font-weight: 800;
+}
+
+.bonus-card p:last-of-type {
+  color: #475569 !important;
+}
