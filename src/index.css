@@ -73,3 +73,121 @@
 .animate-subtle-pulse {
   filter: drop-shadow(0 0 10px rgba(37, 99, 235, 0.38));
 }
+
+
+/* Direção visual: dark-tech com destaque ciano */
+html, body {
+  background: #05080f !important;
+}
+
+body {
+  color: #e8eef7;
+}
+
+.dark-tech-shell {
+  background:
+    radial-gradient(circle at 50% 28%, rgba(20, 217, 195, 0.10), transparent 24rem),
+    radial-gradient(circle at 12% 75%, rgba(14, 165, 233, 0.055), transparent 20rem),
+    radial-gradient(circle at 88% 62%, rgba(20, 217, 195, 0.045), transparent 22rem),
+    #05080f;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.dark-tech-shell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.018) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,0.65), transparent 70%);
+}
+
+.hero-accent {
+  display: inline-block;
+  color: #19d8c4;
+  font-style: italic;
+  text-shadow:
+    0 0 8px rgba(25, 216, 196, 0.72),
+    0 0 22px rgba(25, 216, 196, 0.40),
+    0 0 42px rgba(25, 216, 196, 0.18);
+}
+
+.hero-glow {
+  text-shadow:
+    0 0 12px rgba(25, 216, 196, 0.35),
+    0 0 28px rgba(25, 216, 196, 0.14);
+}
+
+/* Converte o destaque azul anterior para o ciano do novo visual. */
+.text-blue-600,
+.text-blue-700 {
+  color: #19d8c4 !important;
+  text-shadow:
+    0 0 7px rgba(25, 216, 196, 0.62),
+    0 0 18px rgba(25, 216, 196, 0.30);
+}
+
+.bg-blue-600 {
+  background: linear-gradient(135deg, #13cdb9 0%, #19d8c4 55%, #0fb4a3 100%) !important;
+  box-shadow:
+    0 0 14px rgba(25, 216, 196, 0.34),
+    0 10px 34px rgba(25, 216, 196, 0.20) !important;
+}
+
+.bg-blue-700 {
+  background: #0e8f83 !important;
+}
+
+.bg-blue-100 {
+  background: rgba(25, 216, 196, 0.10) !important;
+}
+
+.bg-blue-50 {
+  background: rgba(25, 216, 196, 0.055) !important;
+}
+
+.border-blue-600 {
+  border-color: #19d8c4 !important;
+  box-shadow:
+    0 0 18px rgba(25, 216, 196, 0.20),
+    inset 0 0 18px rgba(25, 216, 196, 0.035);
+}
+
+.border-blue-300,
+.border-blue-200 {
+  border-color: rgba(25, 216, 196, 0.28) !important;
+}
+
+.selection:bg-blue-100::selection {
+  background: rgba(25, 216, 196, 0.20) !important;
+}
+
+.selection:text-blue-900::selection {
+  color: #eafffb !important;
+}
+
+.shadow-pink-cta {
+  box-shadow:
+    0 0 14px rgba(25, 216, 196, 0.34),
+    0 12px 36px rgba(25, 216, 196, 0.18),
+    0 4px 12px rgba(0, 0, 0, 0.24);
+}
+
+@keyframes subtle-pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow:
+      0 0 12px rgba(25, 216, 196, 0.34),
+      0 12px 34px rgba(25, 216, 196, 0.16);
+  }
+  50% {
+    transform: scale(1.025);
+    box-shadow:
+      0 0 20px rgba(25, 216, 196, 0.54),
+      0 15px 42px rgba(25, 216, 196, 0.22);
+  }
+}
