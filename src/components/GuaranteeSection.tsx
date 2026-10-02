@@ -5,7 +5,7 @@ import { optimizedImage } from "../lib/images";
 export const GuaranteeSection: React.FC = () => {
   return (
     <section id="garantia" className="perf-section bg-black px-4 py-12 sm:py-16 text-slate-100">
-      <div className="mx-auto grid max-w-5xl items-center gap-8 rounded-3xl bg-white border border-blue-100/60 shadow-xs p-6 sm:p-10 lg:grid-cols-[260px_minmax(0,1fr)]">
+      <div className="pricing-card mx-auto grid max-w-5xl items-center gap-8 rounded-3xl border p-6 sm:p-10 lg:grid-cols-[260px_minmax(0,1fr)]">
         <div className="flex justify-center">
           <div className="relative h-44 w-44 sm:h-52 sm:w-52 rounded-full overflow-hidden shadow-md flex items-center justify-center bg-slate-950">
             <img
