@@ -13,13 +13,13 @@ export const FAQSection: React.FC = () => {
   return (
     <section
       id="faq"
-      className="perf-section bg-transparent px-4 py-14 sm:py-20 text-slate-800"
+      className="perf-section bg-black px-4 py-14 sm:py-20 text-slate-100"
     >
       <div className="mx-auto max-w-3xl">
-        <h2 className="text-center text-2xl font-black tracking-tight text-slate-900 sm:text-4xl">
+        <h2 className="text-center text-2xl font-black tracking-tight text-white sm:text-4xl">
           PERGUNTAS <span className="text-blue-600">FREQUENTES</span>
         </h2>
-        <p className="mt-2 text-center text-sm font-semibold text-slate-600">
+        <p className="mt-2 text-center text-sm font-semibold text-slate-300">
           Tire suas dúvidas sobre os mapas e como usar o material nos seus estudos.
         </p>
 
@@ -34,7 +34,7 @@ export const FAQSection: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => toggleFAQ(index)}
-                  className="flex w-full items-center justify-between py-5 text-left text-base font-extrabold text-slate-900 hover:no-underline sm:text-lg cursor-pointer gap-4"
+                  className="flex w-full items-center justify-between py-5 text-left text-base font-extrabold text-white hover:no-underline sm:text-lg cursor-pointer gap-4"
                   aria-expanded={isOpen}
                 >
                   <span className="min-w-0">{item.question}</span>
@@ -46,7 +46,7 @@ export const FAQSection: React.FC = () => {
                 </button>
 
                 {isOpen && (
-                  <div className="pb-5 pt-1 text-sm leading-relaxed text-slate-600 sm:text-base font-medium border-t border-slate-200/60">
+                  <div className="pb-5 pt-1 text-sm leading-relaxed text-slate-300 sm:text-base font-medium border-t border-slate-200/60">
                     {item.answer}
                   </div>
                 )}
