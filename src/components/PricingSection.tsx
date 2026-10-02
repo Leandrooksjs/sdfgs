@@ -2,7 +2,7 @@ import React from "react";
 import { Check, X, Star } from "lucide-react";
 import { PRICING_PLANS } from "../data/content";
 import { CTAButton } from "./CTAButton";
-import { optimizedImage } from "../lib/images";
+import { TransparentMockupImage } from "./TransparentMockupImage";
 
 interface PricingSectionProps {
   onOpenUpgradeModal: (originalHref: string) => void;
