@@ -39,7 +39,7 @@ export const HeroSection: React.FC = () => {
         </a>
 
         <p className="mx-auto mt-7 max-w-2xl text-base leading-relaxed font-medium text-slate-400 sm:mt-8 sm:text-xl">
-          Uma biblioteca visual para estudar, revisar e organizar os principais conceitos da Ciência da Computação.
+          Revise os principais conceitos da Ciência da Computação de forma visual, organizada e sem se perder em conteúdos extensos.
         </p>
 
         <div className="mx-auto mt-7 max-w-xl sm:mt-10">
