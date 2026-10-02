@@ -3,7 +3,7 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    background-color: #ffffff;
+    background-color: #000000;
     font-family: ui-rounded, 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, Arial, sans-serif;
   }
 }
