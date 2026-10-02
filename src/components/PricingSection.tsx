@@ -60,7 +60,7 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onOpenUpgradeMod
                     width={640}
                     height={640}
                     decoding="async"
-                    className="mx-auto h-auto w-full max-w-[30rem] object-contain"
+                    className="premium-mockup-image mx-auto h-auto w-full max-w-[30rem] object-contain"
                     loading="lazy"
                   />
                 </div>
