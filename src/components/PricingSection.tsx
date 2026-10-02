@@ -53,18 +53,16 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onOpenUpgradeMod
               )}
 
               {plan.mockupImage && (
-                <div className="mt-5 flex justify-center">
-                  <div className="w-full max-w-[18rem] overflow-hidden rounded-2xl bg-white">
-                    <img
-                      src={plan.mockupImage}
-                      alt={plan.mockupAlt || "Mockup do produto"}
-                      width={640}
-                      height={640}
-                      decoding="async"
-                      className="mx-auto h-auto w-full object-contain"
-                      loading="lazy"
-                    />
-                  </div>
+                <div className="premium-mockup-showcase mt-5 flex w-full justify-center overflow-hidden rounded-2xl">
+                  <img
+                    src={plan.mockupImage}
+                    alt={plan.mockupAlt || "Mockup do produto"}
+                    width={640}
+                    height={640}
+                    decoding="async"
+                    className="mx-auto h-auto w-full max-w-[30rem] object-contain"
+                    loading="lazy"
+                  />
                 </div>
               )}
 
