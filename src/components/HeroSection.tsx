@@ -9,7 +9,7 @@ export const HeroSection: React.FC = () => {
       className="bg-transparent px-4 pb-12 pt-8 text-slate-100 sm:pb-20 sm:pt-12"
     >
       <div className="mx-auto max-w-4xl text-center">
-        <h1 className="hero-glow text-[2.25rem] leading-[1.02] font-black tracking-[-0.035em] text-white sm:text-6xl sm:leading-[1.02] lg:text-7xl">
+        <h1 className="text-[2.25rem] leading-[1.02] font-black tracking-[-0.035em] text-white sm:text-6xl sm:leading-[1.02] lg:text-7xl">
           +300 Mapas Mentais de
           <br />
           <span className="hero-accent">Ciência da Computação.</span>
