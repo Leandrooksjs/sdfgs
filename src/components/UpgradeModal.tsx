@@ -69,7 +69,7 @@ export const UpgradeModal: React.FC<UpgradeModalProps> = ({
             </p>
 
             <p className="text-xs font-medium text-slate-600 sm:text-base">
-              Você está prestes a finalizar. Aproveite e garanta todos os +120 Mapas Mentais com bônus exclusivos por um valor especial.
+              Você está prestes a finalizar. Aproveite e garanta todos os +300 Mapas Mentais de Ciência da Computação com bônus exclusivos por um valor especial.
             </p>
           </div>
 
