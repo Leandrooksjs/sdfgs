@@ -39,7 +39,7 @@ export default function App() {
   };
 
   return (
-    <main className="dark-tech-shell relative min-h-screen bg-black font-sans text-slate-800 antialiased selection:bg-blue-100 selection:text-blue-900">
+    <main className="dark-tech-shell relative min-h-screen bg-black font-sans text-slate-800 antialiased">
       <HeroSection />
       <WhatYouWillReceive />
       <BonusSection />
