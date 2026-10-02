@@ -23,11 +23,11 @@ export const Footer: React.FC = () => {
         </nav>
 
         <p className="mt-6 text-xs text-slate-500 sm:text-sm font-semibold">
-          © 2026 +120 Mapas Mentais Socioemocionais para Educação Infantil. Todos os direitos reservados.
+          © 2026 +300 Mapas Mentais de Ciência da Computação. Todos os direitos reservados.
         </p>
 
         <p className="mx-auto mt-4 max-w-3xl text-xs leading-relaxed text-slate-400">
-          Este é um material pedagógico digital em formato PDF de alta resolução para impressão. Todas as orientações pedagógicas devem ser aplicadas respeitando o desenvolvimento, a singularidade e a faixa etária de cada criança na Educação Infantil.
+          Este é um material digital de apoio aos estudos, organizado de forma visual para consulta e revisão de conceitos de Ciência da Computação. O conteúdo é complementar e não substitui livros, aulas, cursos ou materiais acadêmicos especializados.
         </p>
       </div>
     </footer>
