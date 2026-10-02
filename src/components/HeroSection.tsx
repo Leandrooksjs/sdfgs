@@ -23,8 +23,7 @@ export const HeroSection: React.FC = () => {
           <div className="relative mx-auto flex items-center justify-center rounded-[2rem]">
             <div className="absolute inset-6 rounded-full bg-teal-300/10 blur-3xl" />
             <img
-              src={optimizedImage("/images/ChatGPT Image 2 de out. de 2026, 10_45_59.png", 640, 70)}
-              srcSet={optimizedImage("/images/ChatGPT Image 2 de out. de 2026, 10_45_59.png", 480, 70) + " 480w, " + optimizedImage("/images/ChatGPT Image 2 de out. de 2026, 10_45_59.png", 640, 70) + " 640w"}
+              src="/images/ChatGPT Image 2 de out. de 2026, 10_45_59.png"
               sizes="(max-width: 640px) 344px, 640px"
               alt="Mockup +300 Mapas Mentais de Ciência da Computação"
               referrerPolicy="no-referrer"
