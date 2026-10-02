@@ -6,10 +6,10 @@ export const HeroSection: React.FC = () => {
   return (
     <section
       id="hero-section"
-      className="bg-transparent px-4 py-8 sm:py-16 text-slate-800"
+      className="bg-black px-4 py-8 sm:py-16 text-slate-100"
     >
       <div className="mx-auto max-w-4xl text-center">
-        <h1 className="text-[1.7rem] leading-[1.12] font-black tracking-tight text-slate-900 sm:text-5xl sm:leading-tight lg:text-6xl">
+        <h1 className="text-[1.7rem] leading-[1.12] font-black tracking-tight text-white sm:text-5xl sm:leading-tight lg:text-6xl">
           <span className="text-blue-600">+300</span> Mapas Mentais de Ciência da Computação
         </h1>
 
@@ -35,7 +35,7 @@ export const HeroSection: React.FC = () => {
           </div>
         </a>
 
-        <p className="mx-auto mt-6 max-w-2xl text-base leading-snug font-bold text-slate-700 sm:mt-8 sm:text-xl sm:leading-relaxed">
+        <p className="mx-auto mt-6 max-w-2xl text-base leading-snug font-bold text-slate-200 sm:mt-8 sm:text-xl sm:leading-relaxed">
           Uma biblioteca visual para estudar, revisar e organizar os principais conceitos da Ciência da Computação.
         </p>
 
@@ -43,7 +43,7 @@ export const HeroSection: React.FC = () => {
           <CTAButton id="cta-hero" href="#ofertas" className="animate-subtle-pulse">
             QUERO ACESSAR OS +300 MAPAS AGORA
           </CTAButton>
-          <p className="mt-3 text-xs font-semibold text-slate-500 sm:text-sm">
+          <p className="mt-3 text-xs font-semibold text-slate-300 sm:text-sm">
             Clique no botão e receba acesso imediato ao material completo.
           </p>
         </div>
